@@ -11,7 +11,7 @@ import {
 } from '../pages';
 
 export const AppRoutes = () => {
-    const {setDrawerOptions} = useDrawerContext();
+    // const {setDrawerOptions} = useDrawerContext();
 
     const {toggleTheme} = useAppThemeContext();
 
