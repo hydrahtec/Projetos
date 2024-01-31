@@ -13,3 +13,6 @@ npm i @unform/core
 
 axios 
 npm install axios
+
+yup
+npm i yup

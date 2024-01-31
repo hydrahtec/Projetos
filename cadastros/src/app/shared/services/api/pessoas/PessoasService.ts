@@ -15,7 +15,7 @@ export interface IDetalhePessoa {
     nomeCompleto: string;
 };
 
-type TPessoasComTotalCount {
+type TPessoasComTotalCount = {
     data: IListagemPessoa[];
     totalCount: number;
 };
