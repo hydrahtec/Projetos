@@ -34,13 +34,13 @@ export const VNumericFormat: React.FC<TVTextFieldProps> = ({name, onValueChange,
 
     return (
         <NumericFormat
-        {...rest as any}
+            {...rest as any}
 
-        customInput={TextField}
-        value={value}
-        error={!!error}
-        helperText={error}
-        onValueChange={({value}) => handleChange(value)}
+            customInput={TextField}
+            value={value}
+            error={!!error}
+            helperText={error}
+            onValueChange={({value}) => handleChange(value)}
         />
     );
 };
