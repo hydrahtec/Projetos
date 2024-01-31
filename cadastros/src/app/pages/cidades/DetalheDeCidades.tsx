@@ -12,7 +12,7 @@ interface IFormData {
     nome: string;
 };
 
-const formValidationSchema: yup.SchemaOf<IFormData> = yup.object().shape({nome: yup.string().required().min(3)});
+const formValidationSchema: yup.Schema<IFormData> = yup.object().shape({nome: yup.string().required().min(3)});
 
 export const DetalheDeCidades: React.FC = () => {
     const {formRef, save, saveAndClose, isSaveAndClose} = useVForm();
@@ -45,7 +45,33 @@ export const DetalheDeCidades: React.FC = () => {
         }
     }, [id]);
 
-    
+    const handleSave = (dados: IFormData) => {
+      formValidationSchema
+      .validate(dados, {abortEarly: false})
+      .then((dadosValidados) => {
+        setIsLoading(true);
+
+        if (id === 'nova') {
+            CidadesService.create(dadosValidados)
+            .then((result) => {
+                setIsLoading(false);
+
+                if (result instanceof Error) {
+                    alert()
+                } else {
+                    if () {
+
+                    } else {
+
+                    }
+                }
+            });
+        } else {
+
+        }
+      })
+      .catch(() => {});  
+    };
 
 
     return ();
