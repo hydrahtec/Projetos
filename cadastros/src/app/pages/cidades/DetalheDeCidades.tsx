@@ -7,6 +7,7 @@ import { CidadesService } from '../../shared/services/api/cidades/CidadesService
 import { VTextField, VForm, useVForm, IVFormsErros } from '../../shared/forms';
 import { FerramentasDeDetalhe } from '../../shared/components';
 import { LayoutBaseDePagina } from '../../shared/layouts';
+import { error } from 'console';
 
 interface IFormData {
     nome: string;
@@ -57,20 +58,38 @@ export const DetalheDeCidades: React.FC = () => {
                 setIsLoading(false);
 
                 if (result instanceof Error) {
-                    alert()
+                    alert(result.message);
                 } else {
-                    if () {
-
+                    if (isSaveAndClose()) {
+                        navigate('/cidades');
                     } else {
-
+                        navigate(`/cidades/detalhes/${result}`);
                     }
                 }
             });
         } else {
+            CidadesService
+            .updateById(Number(id), {id: Number(id), ...dadosValidados})
+            .then((result) => {
+                setIsLoading(false);
 
+                if (result instanceof Error) {
+                    alert(result.message);
+                } else {
+                    if (isSaveAndClose()) {
+                        navigate('/cidades');
+                    }
+                }
+            });
         }
       })
-      .catch(() => {});  
+      .catch((errors: yup.ValidationError) => {
+        const validationErros: IVFormsErros = {};
+
+        errors.inner.forEach( error => {
+            
+        };)
+      });  
     };
 
 
