@@ -8,6 +8,7 @@ import { VTextField, VForm, useVForm, IVFormsErros } from '../../shared/forms';
 import { FerramentasDeDetalhe } from '../../shared/components';
 import { LayoutBaseDePagina } from '../../shared/layouts';
 import { error } from 'console';
+import path from 'path';
 
 interface IFormData {
     nome: string;
@@ -87,11 +88,75 @@ export const DetalheDeCidades: React.FC = () => {
         const validationErros: IVFormsErros = {};
 
         errors.inner.forEach( error => {
-            
-        };)
+            if (!error.path) return;
+
+            validationErros[error.path] = error.message;
+        });
+
+        formRef.current?.setErrors(validationErros);
       });  
     };
 
+    const handleDelete = (id: number) => {
+        if (confirm('Realmente deseja apagar?')) {
+            CidadesService.deleteById(id)
+            .then(result => {
+                if (result instanceof Error) {
+                    alert(result.message);
+                } else {
+                    alert('Registro apagado com sucesso"');
+                    navigate('/cidades');
+                }
+            });
+        }
+    };
 
-    return ();
+    return (
+        <LayoutBaseDePagina
+            titulo={id === 'nova' ? 'Nova cidade' : nome}
+            barraDeFerramentas={
+                <FerramentasDeDetalhe 
+                    textoBotaoNovo='Nova'
+                    mostrarBotaoSalvarEFechar
+                    mostrarBotaoNovo={id !=='nova'}
+                    mostrarBotaoApagar={id !== 'nova'}
+
+                    aoClicarEmSalvar={save}
+                    aoClicarEmSalvarEFechar={saveAndClose}
+                    aoClicarEmVoltar={() => navigate('/cidades')}
+                    aoClicarEmApagar={() => handleDelete(Number(id))}
+                    aoClicarEmNovo={() => navigate('/cidades/detalhe/nova')}
+                />
+            }
+        >
+            <VForm ref={formRef} onSubmit={handleSave}>
+                <Box margin={1} display="flex" flexDirection="column" component={Paper} variant="outlined">
+                    <Grid container direction="column" padding={2} spacing={2}>
+
+                        {isLoading && (
+                            <Grid item>
+                                <LinearProgress variant='indeterminate' />
+                            </Grid>
+                        )}
+
+                        <Grid item>
+                            <Typography variant='h6'>Geral</Typography>
+                        </Grid>
+
+                        <Grid container item direction="row" spacing={2}>
+                            <Grid item xs={12} sm={12} lg={4} xl={2}>
+                                <VTextField 
+                                    fullWidth
+                                    name='nome'
+                                    label='Nome'
+                                    disabled={isLoading}
+                                    onChange={e => setnome(e.target.value)}
+                                />
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Box>
+            </VForm>
+        </LayoutBaseDePagina>
+    );
 };
