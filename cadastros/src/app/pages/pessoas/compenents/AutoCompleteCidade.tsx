@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Autocomplete, CircularProgress, TextField } from '@mui/material';
 
 import { CidadesService } from '../../../shared/services/api/cidades/CidadesService';
@@ -12,7 +12,7 @@ type TAutoCompleteOption  = {
 
 interface IAutoCompleteCidadeProps {
     isExternalLoading?: boolean;
-};
+}
 
 export const AutoCompleteCidade: React.FC<IAutoCompleteCidadeProps> = ({isExternalLoading = false}) => {
     const {fieldName, registerField, defaultValue, error, clearError} = useField('cidadeId');
@@ -37,17 +37,17 @@ export const AutoCompleteCidade: React.FC<IAutoCompleteCidadeProps> = ({isExtern
 
         debounce(() => {
             CidadesService.getAll(1, busca, selectedId?.toString())
-            .then((result) => {
-                setIsLoading(false);
+                .then((result) => {
+                    setIsLoading(false);
 
-                if (result instanceof Error) {
-                    // alerr(result.message)
-                } else {
-                    console.log(result);
+                    if (result instanceof Error) {
+                        // alerr(result.message)
+                    } else {
+                        console.log(result);
 
-                    setOpcoes(result.data.map(cidade => ({id: cidade.id, label: cidade.nome})));
-                }
-            });
+                        setOpcoes(result.data.map(cidade => ({id: cidade.id, label: cidade.nome})));
+                    }
+                });
         });
     }, [busca, selectedId]);
 
