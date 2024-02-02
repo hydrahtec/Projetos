@@ -3,7 +3,7 @@ import * as yup from 'yup';
 import { IVFormsErros, VForm, VTextField, useVForm } from '../../shared/forms';
 import { useNavigate, useParams } from 'react-router-dom';
 import { PessoasService } from '../../shared/services/api/pessoas/PessoasService';
-import { Email, Error } from '@mui/icons-material';
+import { Email} from '@mui/icons-material';
 import { LayoutBaseDePagina } from '../../shared/layouts';
 import { Box, Grid, LinearProgress, Paper, Typography } from '@mui/material';
 import { AutoCompleteCidade } from './compenents/AutoCompleteCidade';
@@ -22,7 +22,7 @@ const formValidationSchema: yup.Schema<IFormData> = yup.object().shape({
 });
 
 export const DetalheDePessoas: React.FC = () => {
-    const {formRef, save, saveAndClose, isSaveAndClose} = useVForm();
+    const {formRef, save, saveAndClose, isSavingAndClose} = useVForm();
     const {id = 'nova'} = useParams<'id'>();
     const navigate = useNavigate();
 
@@ -68,7 +68,7 @@ export const DetalheDePessoas: React.FC = () => {
                             if (result instanceof Error) {
                                 alert(result.message);
                             } else {
-                                if (isSaveAndClose()) {
+                                if (isSavingAndClose()) {
                                     navigate('/pessoas');
                                 } else {
                                     navigate(`/pessoas/detalhe/${result}`);
@@ -84,7 +84,7 @@ export const DetalheDePessoas: React.FC = () => {
                         if (result instanceof Error) {
                             alert(result.message);
                         } else {
-                            if (isSaveAndClose()) {
+                            if (isSavingAndClose()) {
                                 navigate('/pessoas');
                             }
                         }
@@ -173,8 +173,8 @@ export const DetalheDePessoas: React.FC = () => {
                         </Grid>
 
                         <Grid container item direction="row" spacing={2}>
-                            <Grid item xs={12} sm={12} md={6} lg={4} xl={2}>
-                                <AutoCompleteCidade isExternalLoading={isLoading} />
+                            <Grid >
+                                <AutoCompleteCidade />
                             </Grid>
                         </Grid>
 

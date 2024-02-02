@@ -17,7 +17,7 @@ interface IFormData {
 const formValidationSchema: yup.Schema<IFormData> = yup.object().shape({nome: yup.string().required().min(3)});
 
 export const DetalheDeCidades: React.FC = () => {
-    const {formRef, save, saveAndClose, isSaveAndClose} = useVForm();
+    const {formRef, save, saveAndClose, isSavingAndClose} = useVForm();
     const {id = 'nova'} = useParams<'id'>();
     const navigate = useNavigate();
 
@@ -36,7 +36,7 @@ export const DetalheDeCidades: React.FC = () => {
                     alert(result.message);
                     navigate('/cidades');
                 } else {
-                    setnome(result.name);
+                    setnome(result.nome);
                     formRef.current?.setData(result)
                 }
             });
@@ -55,13 +55,13 @@ export const DetalheDeCidades: React.FC = () => {
 
         if (id === 'nova') {
             CidadesService.create(dadosValidados)
-            .then((result) => {
+                .then((result) => {
                 setIsLoading(false);
 
                 if (result instanceof Error) {
                     alert(result.message);
                 } else {
-                    if (isSaveAndClose()) {
+                    if (isSavingAndClose()) {
                         navigate('/cidades');
                     } else {
                         navigate(`/cidades/detalhes/${result}`);
@@ -77,7 +77,7 @@ export const DetalheDeCidades: React.FC = () => {
                 if (result instanceof Error) {
                     alert(result.message);
                 } else {
-                    if (isSaveAndClose()) {
+                    if (isSavingAndClose()) {
                         navigate('/cidades');
                     }
                 }

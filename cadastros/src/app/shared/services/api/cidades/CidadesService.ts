@@ -8,7 +8,7 @@ export interface IListagemCidade {
 
 export interface IDetalheCidade {
     id: number;
-    name: string;
+    nome: string;
 }
 
 type TCidadesComTotalCount = {
