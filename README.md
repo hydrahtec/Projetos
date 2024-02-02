@@ -10,9 +10,12 @@ react-number-format
 npm install react-number-format
 
 npm i @unform/core
+npm
+npm i @unform/web
 
 axios 
 npm install axios
 
 yup
 npm i yup
+

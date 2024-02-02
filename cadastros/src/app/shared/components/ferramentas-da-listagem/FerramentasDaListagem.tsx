@@ -1,4 +1,4 @@
-import {Box, Button, Icon, Paper, TextFild, useTheme} from '@mui/material';
+import {Box, Button, Icon, Paper, TextField, useTheme} from '@mui/material';
 
 import {Environment} from '../../environment';
 
@@ -33,7 +33,7 @@ export const FerramentasDaListagem: React.FC<IFerrammentasDaListagemProps> = ({
             component={Paper}
         >
             {mostrarInputBusca && (
-                <TextFild 
+                <TextField 
                 size="small"
                 value={textoDaBusca}
                 placeholder={Environment.INPUT_DE_BUSCA}

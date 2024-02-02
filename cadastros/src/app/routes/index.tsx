@@ -1,7 +1,7 @@
 import {useEffect} from 'react';
 import {Routes, Route, Navigate} from 'react-router-dom';
 
-import {useAppThemeContext, useDrawerContext} from '../shared/contexts';
+import {useDrawerContext} from '../shared/contexts';
 import {
     Dashboard,
     DetalheDePessoas,
@@ -11,9 +11,7 @@ import {
 } from '../pages';
 
 export const AppRoutes = () => {
-    // const {setDrawerOptions} = useDrawerContext();
-
-    const {toggleTheme} = useAppThemeContext();
+    const {setDrawerOptions} = useDrawerContext();
 
     useEffect(() => {
         setDrawerOptions([
