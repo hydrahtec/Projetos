@@ -76,18 +76,18 @@ export const DetalheDePessoas: React.FC = () => {
                         });
                 } else {
                     PessoasService
-                    .updateById(Number(id), {id: Number(id), ...dadosValidados})
-                    .then((result) => {
-                        setIsLoading(false);
+                        .updateById(Number(id), {id: Number(id), ...dadosValidados})
+                        .then((result) => {
+                            setIsLoading(false);
 
-                        if (result instanceof Error) {
-                            alert(result.message);
-                        } else {
-                            if (isSavingAndClose()) {
-                                navigate('/pessoas');
+                            if (result instanceof Error) {
+                                alert(result.message);
+                            } else {
+                                if (isSavingAndClose()) {
+                                    navigate('/pessoas');
+                                }
                             }
-                        }
-                    });
+                        });
                 }
             })
             .catch((errors: yup.ValidationError) => {
@@ -104,13 +104,13 @@ export const DetalheDePessoas: React.FC = () => {
     };
 
     const handleDelete = (id: number) => {
-        if (confirm('Ralmente deseja apagar?')) {
+        if (confirm('Realmente deseja apagar?')) {
             PessoasService.deleteById(id)
                 .then(result => {
                     if (result instanceof Error) {
                         alert(result.message);
                     } else {
-                        alert('Restro apagado com sucesso!');
+                        alert('Registro apagado com sucesso!');
                         navigate('/pessoas');
                     }
                 });
@@ -119,20 +119,20 @@ export const DetalheDePessoas: React.FC = () => {
 
     return(
         <LayoutBaseDePagina
-        titulo={id === 'nova' ? 'Nova pessoa' : nome}
-        barraDeFerramentas={
-          <FerramentasDeDetalhe
-            textoBotaoNovo='Nova'
-            mostrarBotaoSalvarEFechar
-            mostrarBotaoNovo={id !== 'nova'}
-            mostrarBotaoApagar={id !== 'nova'}
-  
-            aoClicarEmSalvar={save}
-            aoClicarEmSalvarEFechar={saveAndClose}
-            aoClicarEmVoltar={() => navigate('/pessoas')}
-            aoClicarEmApagar={() => handleDelete(Number(id))}
-            aoClicarEmNovo={() => navigate('/pessoas/detalhe/nova')}
-            />
+            titulo={id === 'nova' ? 'Nova pessoa' : nome}
+            barraDeFerramentas={
+                <FerramentasDeDetalhe
+                    textoBotaoNovo='Nova'
+                    mostrarBotaoSalvarEFechar
+                    mostrarBotaoNovo={id !== 'nova'}
+                    mostrarBotaoApagar={id !== 'nova'}
+        
+                    aoClicarEmSalvar={save}
+                    aoClicarEmSalvarEFechar={saveAndClose}
+                    aoClicarEmVoltar={() => navigate('/pessoas')}
+                    aoClicarEmApagar={() => handleDelete(Number(id))}
+                    aoClicarEmNovo={() => navigate('/pessoas/detalhe/nova')}
+                />
             }
         >
             <VForm placeholder="formulario" ref={formRef} onSubmit={handleSave}>
