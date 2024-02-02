@@ -7,8 +7,6 @@ import { CidadesService } from '../../shared/services/api/cidades/CidadesService
 import { VTextField, VForm, useVForm, IVFormsErros } from '../../shared/forms';
 import { FerramentasDeDetalhe } from '../../shared/components';
 import { LayoutBaseDePagina } from '../../shared/layouts';
-import { error } from 'console';
-import path from 'path';
 
 interface IFormData {
     nome: string;

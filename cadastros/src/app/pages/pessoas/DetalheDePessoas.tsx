@@ -3,7 +3,6 @@ import * as yup from 'yup';
 import { IVFormsErros, VForm, VTextField, useVForm } from '../../shared/forms';
 import { useNavigate, useParams } from 'react-router-dom';
 import { PessoasService } from '../../shared/services/api/pessoas/PessoasService';
-import { Email} from '@mui/icons-material';
 import { LayoutBaseDePagina } from '../../shared/layouts';
 import { Box, Grid, LinearProgress, Paper, Typography } from '@mui/material';
 import { AutoCompleteCidade } from './compenents/AutoCompleteCidade';
