@@ -23,7 +23,7 @@ setLocale({
         lessThan: ({ less }) => `O campo precisa ter um valor menor que ${less}`,
         min: ({ min }) => `O campo precisa ter um valor com mais de ${min} caracteres`,
         max: ({ max }) => `O campo precisa ter um valor com menos de ${max} caracteres`,
-      },
+    },
     boolean: {},
     object: {},
     array: {},
