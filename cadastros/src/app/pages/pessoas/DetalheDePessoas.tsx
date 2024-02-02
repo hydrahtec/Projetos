@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import * as yup from 'yup';
-import { useVForm } from '../../shared/forms';
+import { IVFormsErros, VForm, VTextField, useVForm } from '../../shared/forms';
 import { useNavigate, useParams } from 'react-router-dom';
 import { PessoasService } from '../../shared/services/api/pessoas/PessoasService';
-import { Email } from '@mui/icons-material';
+import { Email, Error } from '@mui/icons-material';
+import { LayoutBaseDePagina } from '../../shared/layouts';
+import { Box, Grid, LinearProgress, Paper, Typography } from '@mui/material';
+import { AutoCompleteCidade } from './compenents/AutoCompleteCidade';
+import { FerramentasDeDetalhe } from '../../shared/components';
 
 interface IFormData {
     email: string;
@@ -72,14 +76,112 @@ export const DetalheDePessoas: React.FC = () => {
                             }
                         });
                 } else {
-                    
+                    PessoasService
+                    .updateById(Number(id), {id: Number(id), ...dadosValidados})
+                    .then((result) => {
+                        setIsLoading(false);
+
+                        if (result instanceof Error) {
+                            alert(result.message);
+                        } else {
+                            if (isSaveAndClose()) {
+                                navigate('/pessoas');
+                            }
+                        }
+                    });
                 }
             })
-            .catch((erros: yup.ValidationError) => {
+            .catch((errors: yup.ValidationError) => {
+                const ValidationErrors: IVFormsErros = {};
 
+                errors.inner.forEach(error => {
+                    if (!error.path) return;
+
+                    ValidationErrors[error.path] = error.message;
+                });
+
+                formRef.current?.setErrors(ValidationErrors);
             });
     };
+
+    const handleDelete = (id: number) => {
+        if (confirm('Ralmente deseja apagar?')) {
+            PessoasService.deleteById(id)
+                .then(result => {
+                    if (result instanceof Error) {
+                        alert(result.message);
+                    } else {
+                        alert('Restro apagado com sucesso!');
+                        navigate('/pessoas');
+                    }
+                });
+        }
+    };
+
     return(
-        <></>
+        <LayoutBaseDePagina
+        titulo={id === 'nova' ? 'Nova pessoa' : nome}
+        barraDeFerramentas={
+          <FerramentasDeDetalhe
+            textoBotaoNovo='Nova'
+            mostrarBotaoSalvarEFechar
+            mostrarBotaoNovo={id !== 'nova'}
+            mostrarBotaoApagar={id !== 'nova'}
+  
+            aoClicarEmSalvar={save}
+            aoClicarEmSalvarEFechar={saveAndClose}
+            aoClicarEmVoltar={() => navigate('/pessoas')}
+            aoClicarEmApagar={() => handleDelete(Number(id))}
+            aoClicarEmNovo={() => navigate('/pessoas/detalhe/nova')}
+            />
+            }
+        >
+            <VForm ref={formRef} onSubmit={handleSave}>
+                <Box margin={1} display="flex" flexDirection="column" component={Paper} variant="outlined">
+                    <Grid container direction="column" padding={2} spacing={2}>
+                        {isLoading && (
+                            <Grid>
+                                <LinearProgress variant='indeterminate' />
+                            </Grid>
+                        )}
+
+                        <Grid item>
+                            <Typography variant='h6'>Geral</Typography>
+                        </Grid>
+
+                        <Grid container item direction="row" spacing={2}>
+                            <Grid item xs={12} sm={12} md={6} lg={4} xl={2}>
+                                <VTextField 
+                                    fullWidth
+                                    name='nomeCompleto'
+                                    disabled={isLoading}
+                                    label='Nome completo'
+                                    onChange={e => setNome(e.target.value)}
+                                />
+                            </Grid>
+                        </Grid>
+
+                        <Grid container item direction="row" spacing={2}>
+                            <Grid item xs={12} sm={12} md={6} lg={4} xl={2}>
+                                <VTextField 
+                                    fullWidth
+                                    name='email'
+                                    label='Email'
+                                    disabled={isLoading}
+                                />
+                            </Grid>
+                        </Grid>
+
+                        <Grid container item direction="row" spacing={2}>
+                            <Grid item xs={12} sm={12} md={6} lg={4} xl={2}>
+                                <AutoCompleteCidade isExternalLoading={isLoading} />
+                            </Grid>
+                        </Grid>
+
+
+                    </Grid>
+                </Box>
+            </VForm>
+        </LayoutBaseDePagina>
     );
 };
