@@ -6,9 +6,6 @@ Desenvolvido em React com tamplete typescript.
 
 bibliotecas usadas: 
 
-- axios;
--
-
 # Principais pontos
 
 * index
