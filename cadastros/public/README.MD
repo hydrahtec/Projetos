@@ -80,6 +80,11 @@ bibliotecas usadas:
         * api
             * auth
             * axios-config
+                * interceptors    
+                    * index
+                    * ErrorInterceptor
+                    * ResponseInterceptor
+                * index
             * auth cidades
             * auth pessoas
     * themes
