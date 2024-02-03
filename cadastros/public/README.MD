@@ -12,23 +12,28 @@ bibliotecas usadas:
 # Principais pontos
 
 * index
-
+    - 
 * App
-
+    - 
 * package.json
+    - 
 
 * bibliotecas
     * axios
     * material UI
+        - biblioteca de estilização criada pelo equipe do google. 
         * icons
         * material
     * unform
         * core
         * web
     * eslint 
+        - ajuda a deixar o codigo padronizado. 
     * yup
     * json-server
-    * 
+    * react router dom
+        - instalar a ultima versão;
+        - navigate (faz o redirecionamento para outras paginas);
 
 * pages
     * cidades
@@ -43,6 +48,8 @@ bibliotecas usadas:
     * index
 
 * routes  
+    - criar um arquivo index para exportar tudo;
+    - 
 
 * shared
     * components
@@ -54,8 +61,11 @@ bibliotecas usadas:
     * context
         * AuthContex
         * DrawerContext
+            - caixas usadas para menus laterais ou modulos que ficarão escondidos ou paralelos ao cunteudo princiapal.
+            - 
         * index
         * ThemeContext
+            - cria um contexto de temas para ser usado em toda aplicação
     * enviroment
         * index
     * forms
@@ -88,6 +98,8 @@ bibliotecas usadas:
             * auth cidades
             * auth pessoas
     * themes
+        - material theme
+            - createTheme( cria um tema, oferecendo varias possibilidades de estilização, tipo cores(primarias e secundarias), sombras, relevo...)
         * Dark
         * index
         * Light
