@@ -20,7 +20,7 @@ const ListItemLink: React.FC<IListItemLinkProps> = ({to, icon, label, onClick}) 
 
     const handleClick = () => {
         navigate(to);
-        onClick?.();
+        onClick?.(); // se não for undefined atribui fuc
     };
 
     return(
