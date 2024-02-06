@@ -14,6 +14,8 @@
 # ESLINT (padronização dos projetos)
 - npm init @eslint/config
 
+# JSON-SERVER
+- npm install json-server
 react-number-format
 npm install react-number-format
 
