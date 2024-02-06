@@ -7,9 +7,12 @@
 # Dependencias TypeScript
 - npm install @types/react @types/react-dom
 
-# npm install (problema de SSl)
+# Problema de SSL
 - npm set strict-ssl false
 - npm set strict-ssl true
+
+# ESLINT (padronização dos projetos)
+- npm init @eslint/config
 
 react-number-format
 npm install react-number-format
