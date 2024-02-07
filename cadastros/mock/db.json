@@ -48,6 +48,6 @@
     }
   ],
   "auth": {
-    "acessToken": "aaaaaaaaaa.bbbbbbbbbb.cccccccc"
+    "accessToken": "aaaaaaaaaa.bbbbbbbbbb.cccccccc"
   }
 }
