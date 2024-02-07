@@ -1,5 +1,5 @@
-import { Environment } from "../../../environment";
-import { Api } from "../axios-config";
+import { Environment } from '../../../environment';
+import { Api } from '../axios-config';
 
 export interface IListagemCidade {
     id: number;
@@ -25,7 +25,7 @@ const getAll = async (page = 1, filter= '', id = ''): Promise<TCidadesComTotalCo
         if (data) {
             return {
                 data,
-                totalCount: Number(headers['x-total-count'] || Environment.LIMITE_DE_LINHAS),
+                totalCount: Number(headers['Content-Length'] || Environment.LIMITE_DE_LINHAS),
             };
         }
 
@@ -82,7 +82,7 @@ const deleteById  = async (id: number): Promise<void | Error> => {
     try {
        await Api.delete(`/cidades/${id}`);
     } catch (error) {
-        console.error(error);
+          console.error(error);
 
         return new Error((error as {message: string}).message || 'Erro ao apagar o registro.');
     }
