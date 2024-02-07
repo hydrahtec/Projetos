@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 
 import { AuthService } from '../services/api/auth/AuthService';
 
@@ -6,24 +6,24 @@ interface IAuthContextData {
     logout: () => void;
     isAuthenticated: boolean;
     login: (email: string, password: string) => Promise<string | void>;
-};
+}
 
 const AuthContext = createContext({} as IAuthContextData);
 
-const LOCAL_STORAGE_KEY_ACESS_TOKEN = 'APP_ACCESS_TOKEN';
+const LOCAL_STORAGE_KEY_ACCESS_TOKEN = 'APP_ACCESS_TOKEN';
 
 interface IAuthProviderProps {
     children: React.ReactNode;
 }
 
 export const AuthProvider: React.FC<IAuthProviderProps> = ({children}) => {
-    const [accessToken, setAccessToken] = useState<string>()
+    const [accessToken, setAccessToken] = useState<string>();
 
     useEffect(() => {
-        const acessToken = localStorage.getItem(LOCAL_STORAGE_KEY_ACESS_TOKEN);
+        const accessToken = localStorage.getItem(LOCAL_STORAGE_KEY_ACCESS_TOKEN);
 
-        if (acessToken) {
-            setAccessToken(JSON.parse(acessToken));
+        if (accessToken) {
+            setAccessToken(JSON.parse(accessToken));
         } else {
             setAccessToken(undefined);
         }
@@ -35,14 +35,14 @@ export const AuthProvider: React.FC<IAuthProviderProps> = ({children}) => {
         if (result instanceof Error) {
             return result.message;
         } else {
-            localStorage.setItem(LOCAL_STORAGE_KEY_ACESS_TOKEN, JSON.stringify(result.accessToken));
+            localStorage.setItem(LOCAL_STORAGE_KEY_ACCESS_TOKEN, JSON.stringify(result.accessToken));
 
             setAccessToken(result.accessToken);
         }
     }, []);
 
     const handleLogout = useCallback(() => {
-        localStorage.removeItem(LOCAL_STORAGE_KEY_ACESS_TOKEN);
+        localStorage.removeItem(LOCAL_STORAGE_KEY_ACCESS_TOKEN);
         setAccessToken(undefined);
     }, []);
 
