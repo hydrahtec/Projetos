@@ -30,18 +30,18 @@ export const ListagemDeCidades: React.FC= () => {
 
         debounce(() => {
             CidadesService.getAll(pagina, busca)
-            .then((result) => {
-                setIsLoading(false);
+                .then((result) => {
+                    setIsLoading(false);
 
-                if (result instanceof Error) {
-                    alert(result.message)
-                } else {
-                    console.log(result);
+                    if (result instanceof Error) {
+                        alert(result.message);
+                    } else {
+                        console.log(result);
 
-                    setTotalCount(result.totalCount);
-                    setRows(result.data);
-                }
-            });
+                        setTotalCount(result.totalCount);
+                        setRows(result.data);
+                    }
+                });
         });
     }, [busca, pagina]);
 
