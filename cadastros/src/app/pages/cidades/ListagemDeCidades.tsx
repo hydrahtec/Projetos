@@ -33,6 +33,7 @@ export const ListagemDeCidades: React.FC= () => {
                 .then((result) => {
                     setIsLoading(false);
 
+                    
                     if (result instanceof Error) {
                         alert(result.message);
                     } else {
@@ -88,17 +89,15 @@ export const ListagemDeCidades: React.FC= () => {
                         {rows.map(row => (
                             <TableRow key={row.id}>
                                 <TableCell>
-                                    <IconButton size="small" onClick={() => handleDelete(row.id)}>
+                                    <IconButton size='small' onClick={() => handleDelete(row.id)}>
                                         <Icon>delete</Icon>
                                     </IconButton>
-                                    <IconButton size="small" onClick={() => navigate(`/cidades/detalhe/${row.id}`)}>
+                                    <IconButton size='small' onClick={() => navigate(`/cidades/detalhe/${row.id}`)}>
                                         <Icon>edit</Icon>
                                     </IconButton>
                                 </TableCell>
-
                                 <TableCell>{row.nome}</TableCell>
-
-                            </TableRow> 
+                            </TableRow>
                         ))}
                     </TableBody>
 

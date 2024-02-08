@@ -28,7 +28,7 @@ const getAll = async (page = 1, filter = ''): Promise<TPessoasComTotalCount | Er
   
         if (data) {
             return {
-                data,
+                data: data['data'],
                 totalCount: Number(data['items']),
             };
         }

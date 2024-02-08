@@ -21,13 +21,10 @@ const getAll = async (page = 1, filter= '', id = ''): Promise<TCidadesComTotalCo
         const urlRelativa = `/cidades?_page=${page}&nome_like=${filter}&id_like=${id}`;
 
         const {data, headers} = await Api.get(urlRelativa);
-
-        console.log(data);
-        console.log(headers);
-
+        
         if (data) {
             return {
-                data,
+                data: data['data'],
                 totalCount: Number(data['items']),
             };
         }
