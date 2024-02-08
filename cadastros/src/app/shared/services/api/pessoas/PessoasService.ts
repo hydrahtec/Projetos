@@ -29,7 +29,7 @@ const getAll = async (page = 1, filter = ''): Promise<TPessoasComTotalCount | Er
         if (data) {
             return {
                 data,
-                totalCount: Number(headers['Content-Length'] || Environment.LIMITE_DE_LINHAS),
+                totalCount: Number(headers['x-total-count'] || Environment.LIMITE_DE_LINHAS),
             };
         }
   

@@ -4,7 +4,7 @@ import { Api } from '../axios-config';
 export interface IListagemCidade {
     id: number;
     nome: string;
-};
+}
 
 export interface IDetalheCidade {
     id: number;
@@ -18,14 +18,17 @@ type TCidadesComTotalCount = {
 
 const getAll = async (page = 1, filter= '', id = ''): Promise<TCidadesComTotalCount | Error> => {
     try {
-        const urlRelativa = `/cidades?_page=${page}&_limit=${Environment.LIMITE_DE_LINHAS}&nome_like=${filter}&id_like=${id}`;
+        const urlRelativa = `/cidades?_page=${page}&nome_like=${filter}&id_like=${id}`;
 
         const {data, headers} = await Api.get(urlRelativa);
+
+        console.log(data);
+        console.log(headers);
 
         if (data) {
             return {
                 data,
-                totalCount: Number(headers['Content-Length'] || Environment.LIMITE_DE_LINHAS),
+                totalCount: Number(data['item']),
             };
         }
 
@@ -58,7 +61,7 @@ const create = async (dados: Omit<IDetalheCidade, 'id'>): Promise<number | Error
         const {data} = await Api.post<IDetalheCidade>('/cidades', dados);
 
         if (data) {
-            return data.id
+            return data.id;
         }
 
         return new Error('Erro ao criar registro');
@@ -80,9 +83,9 @@ const updateById  = async (id: number, dados: IDetalheCidade): Promise<void | Er
 };
 const deleteById  = async (id: number): Promise<void | Error> => {
     try {
-       await Api.delete(`/cidades/${id}`);
+        await Api.delete(`/cidades/${id}`);
     } catch (error) {
-          console.error(error);
+        console.error(error);
 
         return new Error((error as {message: string}).message || 'Erro ao apagar o registro.');
     }

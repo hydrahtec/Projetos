@@ -48,16 +48,16 @@ export const ListagemDeCidades: React.FC= () => {
     const handleDelete = (id: number) => {
         if (confirm('Realmente deseja apagar?')) {
             CidadesService.deleteById(id)
-            .then(result => {
-                if (result instanceof Error) {
-                    alert(result.message);
-                } else {
-                    setRows(oldRows => [
-                        ...oldRows.filter(oldRow => oldRow.id !== id),
-                    ]);
-                    alert('Registro apagado com sucesso');
-                }
-            });
+                .then(result => {
+                    if (result instanceof Error) {
+                        alert(result.message);
+                    } else {
+                        setRows(oldRows => [
+                            ...oldRows.filter(oldRow => oldRow.id !== id),
+                        ]);
+                        alert('Registro apagado com sucesso');
+                    }
+                });
         }
     };
 
@@ -86,19 +86,19 @@ export const ListagemDeCidades: React.FC= () => {
 
                     <TableBody>
                         {rows.map(row => (
-                           <TableRow key={row.id}>
-                            <TableCell>
-                                <IconButton size="small" onClick={() => handleDelete(row.id)}>
-                                    <Icon>delete</Icon>
-                                </IconButton>
-                                <IconButton size="small" onClick={() => navigate(`/cidades/detalhe/${row.id}`)}>
-                                    <Icon>edit</Icon>
-                                </IconButton>
-                            </TableCell>
+                            <TableRow key={row.id}>
+                                <TableCell>
+                                    <IconButton size="small" onClick={() => handleDelete(row.id)}>
+                                        <Icon>delete</Icon>
+                                    </IconButton>
+                                    <IconButton size="small" onClick={() => navigate(`/cidades/detalhe/${row.id}`)}>
+                                        <Icon>edit</Icon>
+                                    </IconButton>
+                                </TableCell>
 
-                            <TableCell>{row.nome}</TableCell>
+                                <TableCell>{row.nome}</TableCell>
 
-                           </TableRow> 
+                            </TableRow> 
                         ))}
                     </TableBody>
 
@@ -107,25 +107,25 @@ export const ListagemDeCidades: React.FC= () => {
                     )}
 
                     <TableFooter>
-                    {isLoading && (
-                        <TableRow>
-                            <TableCell colSpan={3}>
-                                <LinearProgress variant='indeterminate' />
-                            </TableCell>
-                        </TableRow>
-                    )}
+                        {isLoading && (
+                            <TableRow>
+                                <TableCell colSpan={3}>
+                                    <LinearProgress variant='indeterminate' />
+                                </TableCell>
+                            </TableRow>
+                        )}
 
-                    {(totalCount > 0 && totalCount > Environment.LIMITE_DE_LINHAS) && (
-                        <TableRow>
-                            <TableCell colSpan={3}>
-                                <Pagination 
-                                    page={pagina}
-                                    count={Math.ceil(totalCount / Environment.LIMITE_DE_LINHAS)}
-                                    onChange={(_, newPage) => setSearchParams({busca, pagina: newPage.toString()}, {replace: true})}
-                                />
-                            </TableCell>
-                        </TableRow>
-                    )}
+                        {(totalCount > 0 && totalCount > Environment.LIMITE_DE_LINHAS) && (
+                            <TableRow>
+                                <TableCell colSpan={3}>
+                                    <Pagination 
+                                        page={pagina}
+                                        count={Math.ceil(totalCount / Environment.LIMITE_DE_LINHAS)}
+                                        onChange={(_, newPage) => setSearchParams({busca, pagina: newPage.toString()}, {replace: true})}
+                                    />
+                                </TableCell>
+                            </TableRow>
+                        )}
                     </TableFooter>
                 </Table>
             </TableContainer>

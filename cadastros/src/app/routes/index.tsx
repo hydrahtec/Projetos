@@ -30,11 +30,6 @@ export const AppRoutes = () => {
                 path: '/pessoas',
                 label: 'Pessoas',
             },
-            {
-                icon: 'people',
-                path: '/pessoas',
-                label: 'Pessoas',
-            },
         ]);
     }, []);
 

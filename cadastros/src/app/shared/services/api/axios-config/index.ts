@@ -9,7 +9,7 @@ const Api = axios.create({
 
 Api.interceptors.response.use(
     (response) => responseInterceptor(response),
-    (error) => errorInterceptor(error)
+    (error) => errorInterceptor(error),
 );
 
 export {Api};
