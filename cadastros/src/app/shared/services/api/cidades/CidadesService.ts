@@ -28,7 +28,7 @@ const getAll = async (page = 1, filter= '', id = ''): Promise<TCidadesComTotalCo
         if (data) {
             return {
                 data,
-                totalCount: Number(data['item']),
+                totalCount: Number(data['items']),
             };
         }
 
