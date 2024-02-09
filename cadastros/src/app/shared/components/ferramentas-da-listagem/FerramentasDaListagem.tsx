@@ -38,6 +38,7 @@ export const FerramentasDaListagem: React.FC<IFerrammentasDaListagemProps> = ({
                 value={textoDaBusca}
                 placeholder={Environment.INPUT_DE_BUSCA}
                 onChange={(e) => aoMudarTextoDeBusca?.(e.target.value)}
+                disabled
                 />
             )}
 

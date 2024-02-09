@@ -20,7 +20,7 @@ export const ListagemDeCidades: React.FC= () => {
     const busca = useMemo(() => {
         return searchParams.get('busca') || '';
     }, [searchParams]);
-
+    
     const pagina = useMemo(() => {
         return Number(searchParams.get('pagina') || '1');
     }, [searchParams]);
@@ -38,7 +38,6 @@ export const ListagemDeCidades: React.FC= () => {
                         alert(result.message);
                     } else {
                         console.log(result);
-                        console.log('retorno da busca');
 
                         setTotalCount(result.totalCount);
                         setRows(result.data);
