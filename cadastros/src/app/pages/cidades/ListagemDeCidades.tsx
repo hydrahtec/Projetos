@@ -38,6 +38,7 @@ export const ListagemDeCidades: React.FC= () => {
                         alert(result.message);
                     } else {
                         console.log(result);
+                        console.log('retorno da busca');
 
                         setTotalCount(result.totalCount);
                         setRows(result.data);
