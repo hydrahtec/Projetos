@@ -10,6 +10,9 @@
 # Dependencias TypeScript
 - npm install @types/react @types/react-dom
 
+# Vite
+- npm i vite
+
 # Problema de SSL
 - npm set strict-ssl false
 - npm set strict-ssl true
