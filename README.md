@@ -4,6 +4,9 @@
 # Instruções para criar projetos REACT com template TS
 - npx create-react-app nomodoprojeto --template typescript
 
+# React router Dom
+- npm i react-router-dom
+
 # Dependencias TypeScript
 - npm install @types/react @types/react-dom
 
