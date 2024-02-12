@@ -7,6 +7,9 @@
 # React router Dom
 - npm i react-router-dom
 
+# React Icons
+- npm i react-icons
+
 # Dependencias TypeScript
 - npm install @types/react @types/react-dom
 
