@@ -36,7 +36,7 @@ export const Movie = () => {
 
 
     return(
-       <div classname='movie-page'>
+       <div className='movie-page'>
         {Movie && (
             <>
                 <MovieCard movie={movie} showLink={false} />

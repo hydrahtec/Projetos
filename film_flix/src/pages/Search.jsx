@@ -1,12 +1,12 @@
 import { Environment } from '../environment/Environment';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import {MovieCard} from '..components/MovieCard';
+import {MovieCard} from '../components/MovieCard';
+
+import './css/MoviesGrid.css';
 
 const searchURL = Environment.API_SEARCH;
 const apiKey = Environment.API_KEY;
-
-import './css/MoviesGrid.css';
 
 export const Search = () => {
     const [searchParams] = useSearchParams();
