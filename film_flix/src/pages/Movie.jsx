@@ -40,7 +40,7 @@ export const Movie = () => {
             {Movie && (
                 <>
                     <MovieCard movie={movie} showLink={false} />
-                    <p className='tagline'>{movie.tagline}</p>
+                    <p className='tagline'>{movie.title}</p>
 
                     <div className='info'>
                         <h3>
