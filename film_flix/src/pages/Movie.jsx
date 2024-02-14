@@ -18,8 +18,8 @@ export const Movie = () => {
     const getMovie = async (url) => {
         const res = await fetch(url);
         const data = await res.json();
-        console.log(data);
-        setMovie(data);
+        console.log(data.result);
+        setMovie(data.result);
     };
     
     const formatCurrency = (number) => {
