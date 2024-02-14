@@ -6,12 +6,14 @@ import MovieCard from  '../components/MovieCard';
 
 import './css/movie.css';
 
-const moviesURL = import.meta.env.VITE_API;
-const apiKey = import.meta.env.VITE_API_KEY;
+import { Environment } from '../environment/Environment';
+
+const moviesURL = Environment.API_URL;
+const apiKey = Environment.API_KEY;
 
 export const Movie = () => {
     const {id} = useParams();
-    cosnt [moviesURL, setMovie] = useState(null);
+    const [movie, setMovie] = useState(null);
     
     const getMovie = async (url) => {
         const res = await fetch(url);
