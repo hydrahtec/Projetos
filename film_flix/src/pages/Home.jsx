@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import MovieCard from '../components/MovieCard';
+import {MovieCard} from '../components/MovieCard';
 import { Environment } from '../environment/Environment';
+
 import './css/MoviesGrid.css';
 
 const moviesURL = Environment.API_URL;

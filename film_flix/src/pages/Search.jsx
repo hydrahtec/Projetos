@@ -1,7 +1,7 @@
-import { Environment } from 'environment/Environment';
+import { Environment } from '../environment/Environment';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import MovieCard from '..components/MovieCard';
+import {MovieCard} from '..components/MovieCard';
 
 const searchURL = Environment.API_SEARCH;
 const apiKey = Environment.API_KEY;
