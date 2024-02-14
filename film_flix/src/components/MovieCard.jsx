@@ -1,18 +1,18 @@
 import {Link} from 'react-router-dom';
-
 import {FaStar} from 'react-icons/fa';
+import {Environment} from '../environment/Environment';
 
-const imagesURL = import.meta.env.VITE_IMG;
+const imagesURL = Environment.API_IMG;
 
-export const MovieCard = () => {
+export const MovieCard = ({movie, showLink= true}) => {
     return (
         <div className='movie-card'>
-            <img src={imagesURL + MovieCard.poster_path} alt={MovieCard.title} />
+            <img src={imagesURL + movie.poster_path} alt={movie.title} />
 
-            <h2>{MovieCard.title}</h2>
+            <h2>{movie.title}</h2>
 
             <p>
-               <FaStar /> {MovieCard.vote_average} 
+               <FaStar /> {movie.vote_average} 
             </p>
 
             {showLink && <Link to={`/movie/${movie.id}`}>Detalhes</Link>}
