@@ -39,3 +39,10 @@ npm i yup
 
 eslint
 npm init eslint
+
+#procimos projetos
+
+    - https://www.youtube.com/watch?v=F627pKNUCVQ
+    - https://www.youtube.com/watch?v=F_mXVI8Dalg&list=PLiaBCyobFsa-UvTsHmqDEYhSrZmrpR-c_&index=26
+    - https://www.youtube.com/watch?v=wYpCWwD1oz0&list=PLiaBCyobFsa-UvTsHmqDEYhSrZmrpR-c_&index=22&t=383s
+    
