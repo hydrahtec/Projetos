@@ -59,3 +59,32 @@ npm i formik
 
     - https://www.youtube.com/watch?v=wYpCWwD1oz0&list=PLiaBCyobFsa-UvTsHmqDEYhSrZmrpR-c_&index=22&t=383s
     
+
+
+##################################################
+
+
+# Bibliotecas BackEnd
+
+## node.bcrypt.js
+	- npm i bcrypt
+
+## body-parser
+
+	- npm i body-parser
+
+## cors
+
+	- npm i cors
+
+## express
+
+	-npm i express
+
+## mysql
+
+	- npm i mysql
+
+## nodemon
+
+	- npm i nodemon
