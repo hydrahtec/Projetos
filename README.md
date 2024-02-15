@@ -31,14 +31,17 @@ npm install react-number-format
 npm i @unform/core
 npm i @unform/web
 
-axios 
+# axios 
 npm install axios
 
-yup
+# yup
 npm i yup
 
-eslint
+# eslint
 npm init eslint
+
+# formik
+npm i formik
 
 #procimos projetos
 
