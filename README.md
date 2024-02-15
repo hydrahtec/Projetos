@@ -42,7 +42,17 @@ npm init eslint
 
 #procimos projetos
 
+    Build and Deploy 4 Modern React Apps and Get Hired as a Frontend Developer | Full 10-Hour Course
+
     - https://www.youtube.com/watch?v=F627pKNUCVQ
+    
+    Página de Login e Cadastro utilizando React Js, Node e MySQL (Simples)
+
     - https://www.youtube.com/watch?v=F_mXVI8Dalg&list=PLiaBCyobFsa-UvTsHmqDEYhSrZmrpR-c_&index=26
+       
+        https://github.com/vitorLostadaC/React-JS--Login-Register-MySQL
+    
+    Build a COMPLETE React Admin Dashboard App | React, Material UI, Data Grid, Light & Dark Mode
+
     - https://www.youtube.com/watch?v=wYpCWwD1oz0&list=PLiaBCyobFsa-UvTsHmqDEYhSrZmrpR-c_&index=22&t=383s
     
