@@ -6,8 +6,9 @@ import {ErrorMessage, Formik, Form, Field} from 'formik';
 import './App.css';
 
 export const App = () => {
+    
     const handleLogin = (values) => {
-        Axios.post("http://localhost:3001/login", {
+        Axios.post('http://localhost:3001/login', {
             email: values.email,
             password: values.password,
         })
@@ -17,7 +18,7 @@ export const App = () => {
     };
 
     const handleRegister = (values) => {
-        Axios.post("http://localhost:3001/register", {
+        Axios.post('http://localhost:3001/register', {
           email: values.email,
           password: values.password,
         }).then((response) => {
@@ -52,11 +53,28 @@ export const App = () => {
             .required('A confirmação da senha é obrigatória'),
     });
     
-    
-
-
     return (
-        <div>
+        <div className='container'>
+            <h1>Login</h1>
+            <Formik
+                initialValues={{}}
+                onSubmit={handleLogin}
+                validationSchema={validationsLogin}
+            >
+                <Form className='login-form'>
+                    <div className='login-form-group'>
+                        <Field name='email' className='form-field' placeholder='Email'/>
+                        <ErrorMessage 
+                            component='span'
+                            name='email'
+                            className='form-error'
+                        />
+                    </div>
+                    {/*outro campo*/}
+                    <div></div>
+                    <button></button>
+                </Form>
+            </Formik>
         </div>
     );
 };
