@@ -4,7 +4,7 @@ import {BsGraphUp, BsWallet2, BsHourglassSplit, BsFillFileEarmarkTextFill} from 
 
 import {MovieCard} from  '../components/MovieCard';
 
-import './css/movie.css';
+import './css/Movie.css';
 
 import { Environment } from '../environment/Environment';
 
@@ -13,19 +13,18 @@ const apiKey = Environment.API_KEY;
 
 export const Movie = () => {
     const {id} = useParams();
-    const [movie, setMovie] = useState(null);
+    const [movie, setMovie] = useState({});
     
     const getMovie = async (url) => {
         const res = await fetch(url);
         const data = await res.json();
-        console.log(data.result);
-        setMovie(data.result);
+        setMovie(data);
     };
-    
+
     const formatCurrency = (number) => {
-        return number.toLocaleString('en-US', {
+        return number?.toLocaleString('en-US', {
             style: 'currency',
-            currency: 'USD'
+            currency: 'USD',
         });
     };
 
@@ -37,10 +36,10 @@ export const Movie = () => {
 
     return(
         <div className='movie-page'>
-            {Movie && (
+            { Movie && (
                 <>
                     <MovieCard movie={movie} showLink={false} />
-                    <p className='tagline'>{movie.title}</p>
+                    <p className='tagline'>{movie.tagline}</p>
 
                     <div className='info'>
                         <h3>
@@ -67,7 +66,7 @@ export const Movie = () => {
                         <p>{movie.overview}</p>
                     </div>
                 </>
-            )}
+            ) }
         </div> 
     );
 };
