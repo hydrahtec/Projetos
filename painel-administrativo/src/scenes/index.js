@@ -1,4 +1,4 @@
-export * from './dashboard';
+export * from './dashboard/';
 export * from './geography';
 export * from './invoices';
 export * from './calendar';

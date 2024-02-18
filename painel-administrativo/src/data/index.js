@@ -1,2 +1,2 @@
-export * from './mockData';
-export * from './mockGeoFeatures';
+export * from './mockGeoFeatures/mockGeoFeatures';
+export * from './mockData/mockData';
