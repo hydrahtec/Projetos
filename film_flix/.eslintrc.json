@@ -5,24 +5,22 @@
     },
     "extends": [
         "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
         "plugin:react/recommended"
     ],
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
     },
     "plugins": [
+        "@typescript-eslint",
         "react"
     ],
     "rules": {
-        "indent": [
-            "error",
-            4
-        ],
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
         "quotes": [
             "error",
             "single"
@@ -31,7 +29,7 @@
             "error",
             "always"
         ],
-	"react/prop-types": "off",
-      "react/react-in-jsx-scope": "off"
+	    "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off"
     }
 }

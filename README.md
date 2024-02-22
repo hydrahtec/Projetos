@@ -21,11 +21,11 @@
 - npm set strict-ssl true
 
 # ESLINT + PRETTIER (padronização dos projetos)
-- Instalar a extensão ESLINT
+- Instalar a extensão ESLINT ()
 - desisntalar o prettier
 - Instalar a extensão editorConfig for vs code
 - npm install eslint --save-dev
-- npm eslint --init
+- npm init @eslint/config
 - npm i eslint-plugin-import-helpers
 - npm i eslint-import-resolver-typescript
 - criar na raiz do projeto uma arquivo .eslintignore e inserir (/*.js + node_modules + dist)
