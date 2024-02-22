@@ -20,8 +20,17 @@
 - npm set strict-ssl false
 - npm set strict-ssl true
 
-# ESLINT (padronização dos projetos)
-- npm init @eslint/config
+# ESLINT + PRETTIER (padronização dos projetos)
+- Instalar a extensão ESLINT
+- desisntalar o prettier
+- Instalar a extensão editorConfig for vs code
+- npm install eslint --save-dev
+- npm eslint --init
+- npm i eslint-plugin-import-helpers
+- npm i eslint-import-resolver-typescript
+- criar na raiz do projeto uma arquivo .eslintignore e inserir (/*.js + node_modules + dist)
+- npm i prettier eslint-config-prettier eslint-plugin-prettier -D
+
 
 # JSON-SERVER
 - npm install json-server
