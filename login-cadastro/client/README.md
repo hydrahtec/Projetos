@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# PROJETO Cadastros
+ -- ACESSE: https://cadastro-kohl.vercel.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Apresentação
+-   Este projeto foi desenvolvido com o objetivo de realizar o cadastro de informações a respeito de cidades e pessoas. Nesta primeira versão só é possivel cadastrar dados simples como nome, email e telefone, mas as proximas versões contaram com endereço e dados mais sensíveis.
+- Desenvolvido em React com tamplete typescript, o projeto é robusto e escalável. Contando ainda com um protótipo de autenticação de usuário.
+- O BackEnd da aplicação ainda não foi totalmente implementado, para testar a aplicação de forma completa por favor siga os passos abaixo: 
 
-## Available Scripts
+### Como usar:
+*   Clone o repositório;
+*   Acesse a pasta principal do projeto;
+*   Abra um terminal e execulte o comando:
+    - npm install (para instalar as dependencias);
+*   No mesmo terminal execulte:
+    - npm start (para iniciar o servidor react);
+*   Abra um novo terminal e execulte:
+    - npm run mock (para iniciar o servidor JSON)
+*   Após os servidores inicializarem:
+    - Escolha um Browser de sua preferência, abra uma nova aba e acesse: http://localhost:3000 
+    - Insira usuario e senha:
+    user: reactapp@teste.com
+    password: 123456
+*   Teste a aplicação.   
+ 
+## Desafios do projeto
+*   Estrutura de pastas e componentização dos elementos.
+*   Criação e implementatação dos formulários.
+*   Criação e implementação da barra de ferramentas.
+*   Manipulação das informações do banco de dados via API.
+*   Busca personalizada e páginação.
+*   Reduzir o número de requisições ao banco de dados para melhorar a performace.
+*   Autenticação de usuario (teste).
 
-In the project directory, you can run:
+## Tecnologias envolvidas
+    - React
+    - TypeScript
+    - JavaScript
 
-### `npm start`
+## Bibliotecas
+    * axios
+    * material UI (icons + material)
+    * unform (core + web)
+    * eslint 
+    * yup
+    * json-server
+    * react router dom
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
