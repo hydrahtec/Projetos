@@ -127,6 +127,10 @@ export const App = () => {
                     </button>
                 </Form>
             </Formik>
+            <hr />
+            <h3>Banco de dados Offline</h3>
+            <p>Desculpe o transtorno, o BackEnd da aplicação esta em manutenção. Não será possivel acessa-la nesse momento.</p>
+            <p>Favor acessar o <a href="https://github.com/hydrahtec/Projetos/tree/main/login-cadastro" target='_blank' rel="noreferrer">repositório</a> e clonar o projeto</p>
         </div>
     );
 };
