@@ -21,10 +21,6 @@
   ],
   "cidades": [
     {
-      "id": "2",
-      "nome": "Novo Hamburgo"
-    },
-    {
       "id": "3",
       "nome": "Taquaral"
     },
