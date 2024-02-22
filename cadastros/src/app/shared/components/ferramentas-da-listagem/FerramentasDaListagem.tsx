@@ -9,7 +9,7 @@ interface IFerrammentasDaListagemProps {
     textoBotaoNovo?: string;
     mostrarBotaoNovo?: boolean;
     aoClicarEmNovo?: () => void;
-};
+}
 
 export const FerramentasDaListagem: React.FC<IFerrammentasDaListagemProps> = ({
     textoDaBusca='',
@@ -34,11 +34,11 @@ export const FerramentasDaListagem: React.FC<IFerrammentasDaListagemProps> = ({
         >
             {mostrarInputBusca && (
                 <TextField 
-                size="small"
-                value={textoDaBusca}
-                placeholder={Environment.INPUT_DE_BUSCA}
-                onChange={(e) => aoMudarTextoDeBusca?.(e.target.value)}
-                disabled
+                    size="small"
+                    value={textoDaBusca}
+                    placeholder={Environment.INPUT_DE_BUSCA}
+                    onChange={(e) => aoMudarTextoDeBusca?.(e.target.value)}
+                    disabled
                 />
             )}
 

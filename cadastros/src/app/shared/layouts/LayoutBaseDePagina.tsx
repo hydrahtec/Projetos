@@ -1,12 +1,12 @@
-import { Icon, IconButton, Theme, Typography, useMediaQuery, useTheme } from "@mui/material";
-import { useDrawerContext } from "../contexts";
+import { Icon, IconButton, Theme, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { useDrawerContext } from '../contexts';
 import { Box } from '@mui/system';
 
 interface ILayoutBaseDePaginaProps {
     titulo: string;
     children: React.ReactNode;
     barraDeFerramentas?: React.ReactNode;
-};
+}
 
 export const LayoutBaseDePagina: React.FC<ILayoutBaseDePaginaProps> = ({children, titulo, barraDeFerramentas}) => {
     const smDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));

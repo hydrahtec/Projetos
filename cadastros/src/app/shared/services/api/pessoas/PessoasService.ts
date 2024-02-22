@@ -1,4 +1,4 @@
-import { Environment } from '../../../environment';
+//import { Environment } from '../../../environment';
 import { Api } from '../axios-config';
 
 export interface IListagemPessoa {
@@ -24,7 +24,7 @@ const getAll = async (page = 1, filter = ''): Promise<TPessoasComTotalCount | Er
     try {
         const urlRelativa = `/pessoas?_page=${page}&nomeCompleto_like=${filter}`;
   
-        const { data, headers } = await Api.get(urlRelativa);
+        const { data } = await Api.get(urlRelativa);
   
         if (data) {
             return {

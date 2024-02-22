@@ -1,4 +1,4 @@
-import { Environment } from '../../../environment';
+//import { Environment } from '../../../environment';
 import { Api } from '../axios-config';
 
 export interface IListagemCidade {

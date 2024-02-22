@@ -20,7 +20,7 @@ interface IFerramentasDeDetalheProps {
     aoClicarEmApagar?: () => void;
     aoClicarEmSalvar?: () => void;
     aoClicarEmSalvarEFechar?: () => void;
-};
+}
 
 export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
     textoBotaoNovo = 'Novo',
@@ -49,45 +49,45 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
 
     return (
         <Box 
-        gap={1}
-        marginX={1}
-        padding={1}
-        paddingX={2}
-        display="flex"
-        alignItems="center"
-        height={theme.spacing(5)}
-        component={Paper}
+            gap={1}
+            marginX={1}
+            padding={1}
+            paddingX={2}
+            display="flex"
+            alignItems="center"
+            height={theme.spacing(5)}
+            component={Paper}
         >
-           {(mostrarBotaoSalvar && !mostrarBotaoSalvarCarregando) && (
-            <Button 
-                color='primary'
-                disableElevation
-                variant='contained'
-                onClick={aoClicarEmSalvar}
-                startIcon={<Icon>save</Icon>}
-            >
-                <Typography variant='button' whiteSpace="nowrap" textOverflow="ellipsis" overflow="hidden">
+            {(mostrarBotaoSalvar && !mostrarBotaoSalvarCarregando) && (
+                <Button 
+                    color='primary'
+                    disableElevation
+                    variant='contained'
+                    onClick={aoClicarEmSalvar}
+                    startIcon={<Icon>save</Icon>}
+                >
+                    <Typography variant='button' whiteSpace="nowrap" textOverflow="ellipsis" overflow="hidden">
                    Salvar 
-                </Typography>
-            </Button>
-           )} 
+                    </Typography>
+                </Button>
+            )} 
 
-           {mostrarBotaoSalvarCarregando && (
+            {mostrarBotaoSalvarCarregando && (
                 <Skeleton width={110} height={60} />
-           )}
+            )}
 
             {(mostrarBotaoSalvarEFechar && !mostrarBotaoSalvarEFecharCarregando && !smDown && !mdDown) && (
                 <Button
-                color='primary'
-                disableElevation
-                variant='outlined'
-                onClick={aoClicarEmSalvarEFechar}
-                startIcon={<Icon>save</Icon>}
-              >
-                <Typography variant='button' whiteSpace="nowrap" textOverflow="ellipsis" overflow="hidden">
+                    color='primary'
+                    disableElevation
+                    variant='outlined'
+                    onClick={aoClicarEmSalvarEFechar}
+                    startIcon={<Icon>save</Icon>}
+                >
+                    <Typography variant='button' whiteSpace="nowrap" textOverflow="ellipsis" overflow="hidden">
                   Salvar e fechar
-                </Typography>
-              </Button>
+                    </Typography>
+                </Button>
             )}
 
             {(mostrarBotaoSalvarEFecharCarregando && !smDown && !mdDown) && (
@@ -96,15 +96,15 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
 
             {(mostrarBotaoApagar && !mostrarBotaoApagarCarregando) && (
                 <Button
-                color='primary'
-                disableElevation
-                variant='outlined'
-                onClick={aoClicarEmApagar}
-                startIcon={<Icon>delete</Icon>}
+                    color='primary'
+                    disableElevation
+                    variant='outlined'
+                    onClick={aoClicarEmApagar}
+                    startIcon={<Icon>delete</Icon>}
                 >
-                <Typography variant='button' whiteSpace="nowrap" textOverflow="ellipsis" overflow="hidden">
+                    <Typography variant='button' whiteSpace="nowrap" textOverflow="ellipsis" overflow="hidden">
                     Apagar
-                </Typography>
+                    </Typography>
                 </Button>
             )}
 
@@ -114,15 +114,15 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
 
             {(mostrarBotaoNovo && !mostrarBotaoNovoCarregando && !smDown) && (
                 <Button
-                color='primary'
-                disableElevation
-                variant='outlined'
-                onClick={aoClicarEmNovo}
-                startIcon={<Icon>add</Icon>}
+                    color='primary'
+                    disableElevation
+                    variant='outlined'
+                    onClick={aoClicarEmNovo}
+                    startIcon={<Icon>add</Icon>}
                 >
-                <Typography variant='button' whiteSpace="nowrap" textOverflow="ellipsis" overflow="hidden">
-                    {textoBotaoNovo}
-                </Typography>
+                    <Typography variant='button' whiteSpace="nowrap" textOverflow="ellipsis" overflow="hidden">
+                        {textoBotaoNovo}
+                    </Typography>
                 </Button>
             )}
 
@@ -136,15 +136,15 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
 
             {(mostrarBotaoVoltar && !mostrarBotaoVoltarCarregando) && (
                 <Button
-                color='primary'
-                disableElevation
-                variant='outlined'
-                onClick={aoClicarEmVoltar}
-                startIcon={<Icon>arrow_back</Icon>}
+                    color='primary'
+                    disableElevation
+                    variant='outlined'
+                    onClick={aoClicarEmVoltar}
+                    startIcon={<Icon>arrow_back</Icon>}
                 >
-                <Typography variant='button' whiteSpace="nowrap" textOverflow="ellipsis" overflow="hidden">
+                    <Typography variant='button' whiteSpace="nowrap" textOverflow="ellipsis" overflow="hidden">
                     Voltar
-                </Typography>
+                    </Typography>
                 </Button>
             )}
 

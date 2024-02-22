@@ -18,27 +18,27 @@ export const Dashboard = () => {
         setIsLoadingPessoas(true);
     
         CidadesService.getAll(1)
-          .then((result) => {
-            setIsLoadingCidades(false);
+            .then((result) => {
+                setIsLoadingCidades(false);
     
-            if (result instanceof Error) {
-              alert(result.message);
-            } else {
-              setTotalCountCidades(result.totalCount);
-            }
-          });
+                if (result instanceof Error) {
+                    alert(result.message);
+                } else {
+                    setTotalCountCidades(result.totalCount);
+                }
+            });
 
         PessoasService.getAll(1)
-          .then((result) => {
-            setIsLoadingPessoas(false);
+            .then((result) => {
+                setIsLoadingPessoas(false);
     
-            if (result instanceof Error) {
-              alert(result.message);
-            } else {
-              setTotalCountPessoas(result.totalCount);
-            }
-          });
-      }, []);
+                if (result instanceof Error) {
+                    alert(result.message);
+                } else {
+                    setTotalCountPessoas(result.totalCount);
+                }
+            });
+    }, []);
 
     
 
@@ -55,22 +55,22 @@ export const Dashboard = () => {
 
                             <Card>
                                 <CardContent>
-                                <Typography variant='h5' align='center'>
+                                    <Typography variant='h5' align='center'>
                                     Total de pessoas
-                                </Typography>
+                                    </Typography>
 
-                                <Box padding={6} display='flex' justifyContent='center' alignItems='center'>
-                                    {!isLoadingPessoas && (
-                                    <Typography variant='h1'>
-                                        {totalCountPessoas}
-                                    </Typography>
-                                    )}
-                                    {isLoadingPessoas && (
-                                    <Typography variant='h6'>
+                                    <Box padding={6} display='flex' justifyContent='center' alignItems='center'>
+                                        {!isLoadingPessoas && (
+                                            <Typography variant='h1'>
+                                                {totalCountPessoas}
+                                            </Typography>
+                                        )}
+                                        {isLoadingPessoas && (
+                                            <Typography variant='h6'>
                                         Carregando...
-                                    </Typography>
-                                    )}
-                                </Box>
+                                            </Typography>
+                                        )}
+                                    </Box>
                                 </CardContent>
                             </Card>
 
@@ -80,22 +80,22 @@ export const Dashboard = () => {
 
                             <Card>
                                 <CardContent>
-                                <Typography variant='h5' align='center'>
+                                    <Typography variant='h5' align='center'>
                                     Total de cidades
-                                </Typography>
+                                    </Typography>
 
-                                <Box padding={6} display='flex' justifyContent='center' alignItems='center'>
-                                    {!isLoadingCidades && (
-                                    <Typography variant='h1'>
-                                        {totalCountCidades}
-                                    </Typography>
-                                    )}
-                                    {isLoadingCidades && (
-                                    <Typography variant='h6'>
+                                    <Box padding={6} display='flex' justifyContent='center' alignItems='center'>
+                                        {!isLoadingCidades && (
+                                            <Typography variant='h1'>
+                                                {totalCountCidades}
+                                            </Typography>
+                                        )}
+                                        {isLoadingCidades && (
+                                            <Typography variant='h6'>
                                         Carregando...
-                                    </Typography>
-                                    )}
-                                </Box>
+                                            </Typography>
+                                        )}
+                                    </Box>
                                 </CardContent>
                             </Card>
 
