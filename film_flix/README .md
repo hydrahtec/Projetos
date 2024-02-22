@@ -1,8 +1,8 @@
 # PROJETO Film Flix
- -- ACESSE: 
+ -- ACESSE: https://film-flix-two.vercel.app/
 
 ## Apresentação
--   Este projeto tem como objetivo desenvolver uma página de filmes oferecendo informações como data de lançameno, investimento, receita, sinopse e quantidade de visualizações. Foi utilizado a API do The Movie Database para extrair os dados da página.
+-   Este projeto tem como objetivo desenvolver uma página de filmes oferecendo informações como quntidade de estrelas, orçamento, receita, duração e descrição. Foi utilizado a API do The Movie Database para extrair os dados da página.
 
 ## Desafios do projeto
 *   Conectar API do TMDB;
