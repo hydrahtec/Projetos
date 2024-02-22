@@ -18,8 +18,8 @@
 *   Após os servidores inicializarem:
     - Escolha um Browser de sua preferência, abra uma nova aba e acesse: http://localhost:3000 
     - Insira usuario e senha:
-    user: reactapp@teste.com
-    password: 123456
+        - user: reactapp@teste.com
+        - password: 123456
 *   Teste a aplicação.   
  
 ## Desafios do projeto
