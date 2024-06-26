@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Lato } from 'next/font/google';
 import './globals.css';
+import NavBar from '@/components/NavBar';
+import Footer from '@/components/Footer';
 
 const lato = Lato({ subsets: ['latin'], weight: ['400', '700', '900'] });
 
@@ -17,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={lato.className}>
-        
+        <NavBar />
         {children}
-
+        <Footer />
       </body>
     </html>
   );
