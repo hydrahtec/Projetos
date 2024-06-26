@@ -1,6 +1,32 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.navbar #logo {
+  display: flex;
+  align-items: center;
+  color: var(--secondary_color);
+}
+.navbar #logo svg {
+  font-size: 3rem;
+}
+.navbar #logo h2:hover {
+  color: var(--text_color);
+}
+.navbar #menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.navbar .genero {
+  display: none;
+}
+.navbar #search {
+  display: flex;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.min.module.css.map */

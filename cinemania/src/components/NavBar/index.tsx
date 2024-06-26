@@ -6,11 +6,11 @@ import { BiArrowFromTop, BiSearchAlt, BiSolidCameraMovie } from 'react-icons/bi'
 const NavBar = () => {
   return (
     <nav className={style.navbar}>
-      <div id="logo">
+      <div id={style.logo}>
         <BiSolidCameraMovie />
         <h2 className="logo_title">Cinemania</h2>
       </div>
-      <ul id="menu">
+      <ul id={style.menu}>
         <li>Navegar</li>
         <li>
           <Link href={'/'}>Inicio</Link>
@@ -24,26 +24,26 @@ const NavBar = () => {
         <li>
           <Link href={'/'}>Bombando</Link>
         </li>
-        <li className="genro">
+        <li className={style.genero}>
           <p>
             Gênero <BiArrowFromTop />
           </p>
           <ul>
-            <li>genero</li>
-            <li>genero</li>
-            <li>genero</li>
-            <li>genero</li>
-            <li>genero</li>
-            <li>genero</li>
-            <li>genero</li>
-            <li>genero</li>
-            <li>genero</li>
-            <li>genero</li>
-            <li>genero</li>
+            <li>gênero</li>
+            <li>gênero</li>
+            <li>gênero</li>
+            <li>gênero</li>
+            <li>gênero</li>
+            <li>gênero</li>
+            <li>gênero</li>
+            <li>gênero</li>
+            <li>gênero</li>
+            <li>gênero</li>
+            <li>gênero</li>
           </ul>
         </li>
       </ul>
-      <form id="search">
+      <form id={style.search}>
         <label htmlFor="search">
           <BiSearchAlt />
         </label>

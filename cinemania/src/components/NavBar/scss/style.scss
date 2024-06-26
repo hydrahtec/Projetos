@@ -1,4 +1,32 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  #logo {
+    display: flex;
+    align-items: center;
+    color: var(--secondary_color);
+
+    svg {
+      font-size: 3rem;
+    }
+    h2:hover {
+      color: var(--text_color);
+    }
+  }
+  #menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+  }
+  .genero {
+    display: none;
+  }
+  #search {
+    display: flex;
+    align-items: center;
+  }
 }

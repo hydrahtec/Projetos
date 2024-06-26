@@ -4,9 +4,17 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #141414;
-  color: #e5e5e5;
+:root {
+  --primary_color: #141414;
+  --secondary_color: #f47521;
+  --text_color: #e5e5e5;
+
 }
 
-/*# sourceMappingURL=globals.css.map */
+body {
+  background-color: #141414;
+  color: var(--text_color);
+  padding: 0 15px;
+}
+
+
