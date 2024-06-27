@@ -23,9 +23,9 @@ const NavBar = () => {
           </li>
           <li className={style.genero_list}>
             <span  id={style.arrow}>
-              <ListArrow text = "Gênero " elementId = "" classValue =""/>
+              <ListArrow text = "Gênero " elementId = "#generos" classValue =""/>
             </span>
-            <div className={style.generos}>
+            <div id='generos' className={style.generos}>
               <div className={style.selected}>teste sdsf</div>
               <div>teste sdsf</div>
               <div>teste sdsf</div>
