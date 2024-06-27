@@ -54,12 +54,10 @@
       color: var(--secondary_color);
     }
 
-    &:hover .generos {
-      visibility: visible;
-    }
     .generos {
       position: absolute;
       left: -10%;
+      top: -100%;
       width: 300px;
       background-color: #141414a0;
       display: flex;
@@ -67,11 +65,18 @@
       flex-wrap: wrap;
       padding: 10px;
       gap: 5px;
+      transition: all 0.3s ease-in;
+
       div {
         width: 32%;
         font-size: 1.5rem;
         padding: 5px;
         cursor: pointer;
+      }
+
+      &.visibl {
+        top: 100%;
+        visibility: visible;
       }
     }
   }
@@ -84,7 +89,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
 
     input {
       color: var(--primary_color);

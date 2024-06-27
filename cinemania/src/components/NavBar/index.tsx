@@ -23,7 +23,7 @@ const NavBar = () => {
           </li>
           <li className={style.genero_list}>
             <span  id={style.arrow}>
-              <ListArrow text = "Gênero " elementId = "#generos" classValue =""/>
+              <ListArrow text = "Gênero " elementId = "#generos" classValue ="style_min_visibl__z0LRL"/>
             </span>
             <div id='generos' className={style.generos}>
               <div className={style.selected}>teste sdsf</div>

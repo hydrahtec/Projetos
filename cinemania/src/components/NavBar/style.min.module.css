@@ -50,12 +50,10 @@
 .navbar .genero_list span:hover {
   color: var(--secondary_color);
 }
-.navbar .genero_list:hover .generos {
-  visibility: visible;
-}
 .navbar .genero_list .generos {
   position: absolute;
   left: -10%;
+  top: -100%;
   width: 300px;
   background-color: rgba(20, 20, 20, 0.6274509804);
   display: flex;
@@ -63,12 +61,17 @@
   flex-wrap: wrap;
   padding: 10px;
   gap: 5px;
+  transition: all 0.3s ease-in;
 }
 .navbar .genero_list .generos div {
   width: 32%;
   font-size: 1.5rem;
   padding: 5px;
   cursor: pointer;
+}
+.navbar .genero_list .generos.visibl {
+  top: 100%;
+  visibility: visible;
 }
 .navbar .selected {
   background-color: red;
