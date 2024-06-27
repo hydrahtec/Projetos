@@ -5,7 +5,10 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
-  background-image: url('https://picsum.photos/1000');
+  background-image: url('https://picsum.photos/1024/820');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .main h1 {
   font-size: 50px;
