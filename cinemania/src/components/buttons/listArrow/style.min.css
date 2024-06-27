@@ -6,7 +6,7 @@
   border: none;
   cursor: pointer;
   display: flex;
-  justify-content: flex-end;
+  align-items: end;
   gap: 3px;
   padding: 5px;
 }
