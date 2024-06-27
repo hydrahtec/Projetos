@@ -1,10 +1,12 @@
-.buttonLupa {
+.button_listArrow {
   background-color: var(--primary_color);
   border-radius: 5px;
   color: var(--text_color);
   font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
 }
-.buttonLupa svg {
+.button_listArrow svg {
   font-size: 2rem;
   color: var(--secondary_color);
   background-color: none;

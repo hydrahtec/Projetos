@@ -2,6 +2,7 @@ import Link from 'next/link';
 import style from './style.min.module.css';
 import {BiSolidCameraMovie } from 'react-icons/bi';
 import Lupa from '../buttons/lupa';
+import ListArrow from '../buttons/listArrow';
 //import Input from '@/components/Input';
 
 const NavBar = () => {
@@ -21,8 +22,8 @@ const NavBar = () => {
             <Link href={'/'}>Series</Link>
           </li>
           <li className={style.genero_list}>
-            <span id={style.arrow}>
-              <ToggleClass text = "Gênero " elementId = "" classValue =""/>
+            <span  id={style.arrow}>
+              <ListArrow text = "Gênero " elementId = "" classValue =""/>
             </span>
             <div className={style.generos}>
               <div className={style.selected}>teste sdsf</div>
