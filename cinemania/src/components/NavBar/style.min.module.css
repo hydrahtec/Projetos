@@ -2,6 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
+  background-color: var(--primary_color);
+  padding: 0 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .navbar #logo {
   display: flex;
@@ -53,7 +60,7 @@
 .navbar .genero_list .generos {
   position: absolute;
   left: -10%;
-  top: -100%;
+  top: -300%;
   width: 300px;
   background-color: rgba(20, 20, 20, 0.6274509804);
   display: flex;
@@ -70,7 +77,7 @@
   cursor: pointer;
 }
 .navbar .genero_list .generos.visibl {
-  top: 100%;
+  top: 135%;
   visibility: visible;
 }
 .navbar .selected {
