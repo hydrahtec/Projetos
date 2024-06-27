@@ -1,0 +1,10 @@
+.buttonLupa {
+  background-color: var(--primary_color);
+  border-radius: 5px;
+}
+.buttonLupa svg {
+  font-size: 2rem;
+  color: var(--secondary_color);
+  background-color: none;
+  cursor: pointer;
+}

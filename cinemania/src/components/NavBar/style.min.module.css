@@ -76,6 +76,31 @@
 .navbar #search {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+.navbar #search .input {
+  color: var(--primary_color);
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  margin-left: 5px;
+  width: 0px;
+  height: 0px;
+  cursor: none;
+  transition: all 0.5s ease-in;
+}
+.navbar #search .input:focus {
+  outline: none;
+}
+.navbar #search .input::placeholder {
+  color: var(--secondary_color);
+  font-size: 1.5rem;
+}
+.navbar #search .input .active {
+  width: 150px;
+  height: 25px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.min.module.css.map */

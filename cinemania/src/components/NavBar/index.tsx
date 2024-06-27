@@ -1,10 +1,7 @@
 import Link from 'next/link';
 import style from './style.min.module.css';
-import {
-  BiArrowFromTop,
-  BiSearchAlt,
-  BiSolidCameraMovie,
-} from 'react-icons/bi';
+import { BiArrowFromTop, BiSolidCameraMovie } from 'react-icons/bi';
+import ButtonLupa from '../buttons/Click';
 //import Input from '@/components/Input';
 
 const NavBar = () => {
@@ -24,29 +21,30 @@ const NavBar = () => {
             <Link href={'/'}>Series</Link>
           </li>
           <li className={style.genero_list}>
-            <span id={style.arrow}>Gênero <BiArrowFromTop /></span>
+            <span id={style.arrow}>
+              Gênero <BiArrowFromTop />
+            </span>
             <div className={style.generos}>
-            <div className={style.selected}>teste sdsf</div>
-            <div>teste sdsf</div>
-            <div>teste sdsf</div>
-            <div>teste sdsf</div>
-            <div>teste sdsf</div>
-            <div>teste sdsf</div>
-            <div>teste sdsf</div>
-            <div>teste sdsf</div>
-            <div>teste sdsf</div>
-            <div>teste sdsf</div>
+              <div className={style.selected}>teste sdsf</div>
+              <div>teste sdsf</div>
+              <div>teste sdsf</div>
+              <div>teste sdsf</div>
+              <div>teste sdsf</div>
+              <div>teste sdsf</div>
+              <div>teste sdsf</div>
+              <div>teste sdsf</div>
+              <div>teste sdsf</div>
+              <div>teste sdsf</div>
             </div>
           </li>
         </ul>
       </div>
       <form id={style.search}>
-        <label htmlFor="search">
-          <BiSearchAlt />
-        </label>
-        <input type="text" placeholder="Buscar" />
+        <ButtonLupa />
+        <input id="lupa" className={style.input} type="text" placeholder="Buscar ..." />
       </form>
     </nav>
   );
 };
+
 export default NavBar;
