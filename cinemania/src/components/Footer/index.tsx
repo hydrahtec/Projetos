@@ -1,9 +1,14 @@
-//import style form './style.min.module.css';
+import Link from 'next/link';
+import style from './style.min.module.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
-
+    <footer className={style.footer}>
+      <p>
+        <Link href="/">Politica de privacidade</Link> -{' '}
+        <Link href="/">Termos de uso</Link>
+      </p>
+      <p>Desenvolvido por Hydrah Technologia - todos os direitos reservados</p>
     </footer>
   );
 };
