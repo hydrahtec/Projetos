@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import style from './style.min.module.css';
-import {BiSolidCameraMovie } from 'react-icons/bi';
+import { BiSolidCameraMovie } from 'react-icons/bi';
 import Lupa from '../buttons/lupa';
 import ListArrow from '../buttons/listArrow';
-//import Input from '@/components/Input';
 
 const NavBar = () => {
   return (
@@ -22,10 +21,14 @@ const NavBar = () => {
             <Link href={'/'}>Series</Link>
           </li>
           <li className={style.genero_list}>
-            <span  id={style.arrow}>
-              <ListArrow text = "Gênero " elementId = "#generos" classValue ="style_min_visibl__z0LRL"/>
+            <span id={style.arrow}>
+              <ListArrow
+                text="Gênero "
+                elementId="#generos"
+                classValue="style_min_visibl__z0LRL"
+              />
             </span>
-            <div id='generos' className={style.generos}>
+            <div id="generos" className={style.generos}>
               <div className={style.selected}>teste sdsf</div>
               <div>teste sdsf</div>
               <div>teste sdsf</div>
@@ -41,7 +44,7 @@ const NavBar = () => {
         </ul>
       </div>
       <form id={style.search}>
-        <Lupa text = "" elementId = "#lupa" classValue= "style_min_active__RJ0Ed"/>
+        <Lupa text="" elementId="#lupa" classValue="style_min_active__RJ0Ed" />
         <input id="lupa" className="" type="text" placeholder="Buscar ..." />
       </form>
     </nav>
