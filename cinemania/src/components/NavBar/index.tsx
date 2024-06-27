@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import style from './style.min.module.css';
-import { BiArrowFromTop, BiSearchAlt, BiSolidCameraMovie } from 'react-icons/bi';
+import {
+  BiArrowFromTop,
+  BiSearchAlt,
+  BiSolidCameraMovie,
+} from 'react-icons/bi';
 //import Input from '@/components/Input';
 
 const NavBar = () => {
@@ -8,41 +12,34 @@ const NavBar = () => {
     <nav className={style.navbar}>
       <div id={style.logo}>
         <BiSolidCameraMovie />
-        <h2 className="logo_title">Cinemania</h2>
+        <h2 className={style.logo_title}>Cinemania</h2>
+        <ul id={style.menu}>
+          <li>
+            <Link href={'/'}>Inicio</Link>
+          </li>
+          <li>
+            <Link href={'/'}>Filmes</Link>
+          </li>
+          <li className={style.block}>
+            <Link href={'/'}>Series</Link>
+          </li>
+          <li className={style.genero_list}>
+            <span id={style.arrow}>Gênero <BiArrowFromTop /></span>
+            <div className={style.generos}>
+            <div className={style.selected}>teste sdsf</div>
+            <div>teste sdsf</div>
+            <div>teste sdsf</div>
+            <div>teste sdsf</div>
+            <div>teste sdsf</div>
+            <div>teste sdsf</div>
+            <div>teste sdsf</div>
+            <div>teste sdsf</div>
+            <div>teste sdsf</div>
+            <div>teste sdsf</div>
+            </div>
+          </li>
+        </ul>
       </div>
-      <ul id={style.menu}>
-        <li>Navegar</li>
-        <li>
-          <Link href={'/'}>Inicio</Link>
-        </li>
-        <li>
-          <Link href={'/'}>Filmes</Link>
-        </li>
-        <li>
-          <Link href={'/'}>Series</Link>
-        </li>
-        <li>
-          <Link href={'/'}>Bombando</Link>
-        </li>
-        <li className={style.genero}>
-          <p>
-            Gênero <BiArrowFromTop />
-          </p>
-          <ul>
-            <li>gênero</li>
-            <li>gênero</li>
-            <li>gênero</li>
-            <li>gênero</li>
-            <li>gênero</li>
-            <li>gênero</li>
-            <li>gênero</li>
-            <li>gênero</li>
-            <li>gênero</li>
-            <li>gênero</li>
-            <li>gênero</li>
-          </ul>
-        </li>
-      </ul>
       <form id={style.search}>
         <label htmlFor="search">
           <BiSearchAlt />

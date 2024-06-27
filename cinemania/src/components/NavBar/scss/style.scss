@@ -6,12 +6,18 @@
   #logo {
     display: flex;
     align-items: center;
-    color: var(--secondary_color);
+    justify-content: center;
 
     svg {
-      font-size: 3rem;
+      font-size: 5rem;
+      color: var(--secondary_color);
     }
-    h2:hover {
+    .logo_title {
+      color: var(--secondary_color);
+      font-size: 2.5rem;
+      margin-left: 5px;
+    }
+    .logo_title:hover {
       color: var(--text_color);
     }
   }
@@ -21,10 +27,58 @@
     justify-content: space-around;
     align-items: center;
     list-style: none;
+
+    .block a {
+      cursor: not-allowed;
+    }
+    a {
+      color: var(--text_color);
+      text-decoration: none;
+      padding: 10px;
+      font-size: 1.7rem;
+
+      &:hover {
+        color: var(--secondary_color);
+      }
+    }
   }
-  .genero {
-    display: none;
+  .genero_list {
+    font-size: 1.7rem;
+    position: relative;
+
+    span#arrow svg {
+      font-size: 1.5rem;
+      align-self: center;
+    }
+    span:hover {
+      color: var(--secondary_color);
+    }
+
+    &:hover .generos {
+      display: flex;
+    }
+    .generos {
+      position: absolute;
+      left: -10%;
+      width: 300px;
+      background-color: #141414a0;
+      display: none;
+      flex-wrap: wrap;
+      padding: 10px;
+      gap: 5px;
+      div {
+        width: 32%;
+        font-size: 1.5rem;
+        padding: 5px;
+        cursor: pointer;
+      }
+    }
   }
+  .selected {
+    background-color: red;
+    border-radius: 10px;
+  }
+
   #search {
     display: flex;
     align-items: center;
