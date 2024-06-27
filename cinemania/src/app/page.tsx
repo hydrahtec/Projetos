@@ -3,7 +3,9 @@ import styles from './page.module.css';
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h1>Cinemania</h1>
+      <section className={styles.header}>
+      
+      </section>
     </main>
   );
 }
