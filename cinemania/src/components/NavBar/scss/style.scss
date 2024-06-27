@@ -9,7 +9,7 @@
     justify-content: center;
 
     svg {
-      font-size: 5rem;
+      font-size: 4.5rem;
       color: var(--secondary_color);
     }
     .logo_title {
@@ -46,9 +46,11 @@
     font-size: 1.7rem;
     position: relative;
 
-    span#arrow svg {
-      font-size: 1.5rem;
-      align-self: center;
+    #arrow {
+      svg {
+        font-size: 2.5rem;
+        align-self: center;
+      }
     }
     span:hover {
       color: var(--secondary_color);

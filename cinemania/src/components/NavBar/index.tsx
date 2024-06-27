@@ -21,13 +21,13 @@ const NavBar = () => {
             <Link href={'/'}>Series</Link>
           </li>
           <li className={style.genero_list}>
-            <span id={style.arrow}>
+            <div id={style.arrow}>
               <ListArrow
                 text="Gênero "
                 elementId="#generos"
                 classValue="style_min_visibl__z0LRL"
               />
-            </span>
+            </div>
             <div id="generos" className={style.generos}>
               <div className={style.selected}>teste sdsf</div>
               <div>teste sdsf</div>

@@ -9,7 +9,7 @@
   justify-content: center;
 }
 .navbar #logo svg {
-  font-size: 5rem;
+  font-size: 4.5rem;
   color: var(--secondary_color);
 }
 .navbar #logo .logo_title {
@@ -43,8 +43,8 @@
   font-size: 1.7rem;
   position: relative;
 }
-.navbar .genero_list span#arrow svg {
-  font-size: 1.5rem;
+.navbar .genero_list #arrow svg {
+  font-size: 2.5rem;
   align-self: center;
 }
 .navbar .genero_list span:hover {
