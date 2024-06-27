@@ -51,14 +51,15 @@
   color: var(--secondary_color);
 }
 .navbar .genero_list:hover .generos {
-  display: flex;
+  visibility: visible;
 }
 .navbar .genero_list .generos {
   position: absolute;
   left: -10%;
   width: 300px;
   background-color: rgba(20, 20, 20, 0.6274509804);
-  display: none;
+  display: flex;
+  visibility: hidden;
   flex-wrap: wrap;
   padding: 10px;
   gap: 5px;

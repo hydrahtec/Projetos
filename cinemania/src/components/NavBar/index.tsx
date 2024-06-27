@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import style from './style.min.module.css';
 import { BiArrowFromTop, BiSolidCameraMovie } from 'react-icons/bi';
-import ButtonLupa from '../buttons/Click';
+import ToggleClass from '../buttons/toggleClass';
 //import Input from '@/components/Input';
 
 const NavBar = () => {
@@ -40,7 +40,7 @@ const NavBar = () => {
         </ul>
       </div>
       <form id={style.search}>
-        <ButtonLupa />
+        <ToggleClass elementId = "#lupa" classValue= "style_min_active__RJ0Ed"/>
         <input id="lupa" className="" type="text" placeholder="Buscar ..." />
       </form>
     </nav>

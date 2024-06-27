@@ -55,14 +55,15 @@
     }
 
     &:hover .generos {
-      display: flex;
+      visibility: visible;
     }
     .generos {
       position: absolute;
       left: -10%;
       width: 300px;
       background-color: #141414a0;
-      display: none;
+      display: flex;
+      visibility: hidden;
       flex-wrap: wrap;
       padding: 10px;
       gap: 5px;
