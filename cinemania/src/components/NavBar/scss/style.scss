@@ -85,7 +85,7 @@
     justify-content: center;
 
 
-    .input {
+    input {
       color: var(--primary_color);
       font-size: 1.5rem;
       border: none;
@@ -93,7 +93,7 @@
       padding: 3px;
       margin-left: 5px;
       width: 0px;
-      height: 0px;
+      height: 25px;
       cursor: none;
       transition: all 0.5s ease-in;
 
@@ -104,9 +104,8 @@
         color: var(--secondary_color);
         font-size: 1.5rem;
       }
-      & .active {
+      &.active {
         width: 150px;
-        height: 25px;
         cursor: pointer;
       }
     }

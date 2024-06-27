@@ -41,7 +41,7 @@ const NavBar = () => {
       </div>
       <form id={style.search}>
         <ButtonLupa />
-        <input id="lupa" className={style.input} type="text" placeholder="Buscar ..." />
+        <input id="lupa" className="" type="text" placeholder="Buscar ..." />
       </form>
     </nav>
   );
