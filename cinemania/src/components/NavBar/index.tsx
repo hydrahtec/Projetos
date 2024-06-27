@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import style from './style.min.module.css';
-import { BiArrowFromTop, BiSolidCameraMovie } from 'react-icons/bi';
-import ToggleClass from '../buttons/toggleClass';
+import {BiSolidCameraMovie } from 'react-icons/bi';
+import Lupa from '../buttons/lupa';
 //import Input from '@/components/Input';
 
 const NavBar = () => {
@@ -22,7 +22,7 @@ const NavBar = () => {
           </li>
           <li className={style.genero_list}>
             <span id={style.arrow}>
-              Gênero <BiArrowFromTop />
+              <ToggleClass text = "Gênero " elementId = "" classValue =""/>
             </span>
             <div className={style.generos}>
               <div className={style.selected}>teste sdsf</div>
@@ -40,7 +40,7 @@ const NavBar = () => {
         </ul>
       </div>
       <form id={style.search}>
-        <ToggleClass elementId = "#lupa" classValue= "style_min_active__RJ0Ed"/>
+        <Lupa text = "" elementId = "#lupa" classValue= "style_min_active__RJ0Ed"/>
         <input id="lupa" className="" type="text" placeholder="Buscar ..." />
       </form>
     </nav>
