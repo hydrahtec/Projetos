@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import MovieCard from '@/components/MovieCard';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -23,21 +23,7 @@ export default function Home() {
       <section className={styles.top_rated}>
         <h3 className={styles.title_sec}>Filmes mais procurados:</h3>
         <div className={styles.movie_container}>
-          <div className={styles.movie_card}>
-            <img src="https://picsum.photos/200/250" alt="imagem do filme" />
-            <h2>Titulo do filme</h2>
-            <p>votos e views</p>
-            <div className={styles.card_overview}>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
-                amet. Voluptatibus, dignissimos corrupti tempora error dolor
-                sint est maiores quia molestiae reiciendis facere,
-                reprehenderit, distinctio a sit quibusdam voluptatem
-                repudiandae?
-              </p>
-              <Link href="/">Detalhes</Link>
-            </div>
-          </div>
+          <MovieCard />
         </div>
       </section>
     </main>
