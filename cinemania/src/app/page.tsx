@@ -1,7 +1,8 @@
-import MovieCard from '@/components/MovieCard';
+'use client'
+import { useEffect, useState } from 'react';
 import styles from './page.module.css';
+import MovieCard from '@/components/MovieCard';
 import { tmdb } from '@/api/tmdbApi';
-import { useState } from 'react';
 
 const TMBD = tmdb;
 
@@ -12,8 +13,14 @@ export default function Home() {
     const res = await fetch(url);
     const data = await res.json();
 
-    setTopMovies(data);
+    setTopMovies(data.results);
   };
+
+  useEffect(() => {
+    const topRated = TMBD.API_TOP_RATED;
+
+    getMovies(topRated);
+  }, []);
 
   return (
     <main className={styles.main}>

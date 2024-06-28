@@ -1,3 +1,5 @@
+'use client';
+
 const tmdb = {
   API_KEY: 'api_key=70662fd4135b92fe0fc87874e13356c4',
   API_URL: 'https://api.themoviedb.org/3/movie/',
@@ -6,6 +8,5 @@ const tmdb = {
   API_TOP_RATED:
     'https://api.themoviedb.org/3/movie/top_rated?api_key=70662fd4135b92fe0fc87874e13356c4',
 };
-
 
 export { tmdb };
