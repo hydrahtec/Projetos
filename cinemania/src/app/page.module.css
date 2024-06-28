@@ -3,13 +3,53 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
   min-height: 100vh;
   background-image: url('https://picsum.photos/1024/820');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding-top: 60px;
 }
-.main h1 {
-  font-size: 50px;
+.header {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  padding: 0 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.header div {
+  width: 400px;
+  height: 400px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.336);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+  border-radius: 10px;
+}
+.header div h2 {
+  font-size: 4rem;
+}
+.header .clasification {
+  font-size: 2rem;
+  color: var(--secondary_color);
+}
+
+.decript {
+  font-size: 2.5rem;
+}
+.header_info {
+  font-size: 2rem;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--secondary_color);
+}
+
+.header_info a {
+  color: var(--text_color);
+  text-decoration: none;
+  display: block;
 }
