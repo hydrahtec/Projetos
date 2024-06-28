@@ -24,6 +24,8 @@ export default function Home() {
         <h3 className={styles.title_sec}>Filmes mais procurados:</h3>
         <div className={styles.movie_container}>
           <MovieCard />
+          <MovieCard />
+          <MovieCard />
         </div>
       </section>
     </main>
