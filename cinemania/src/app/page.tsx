@@ -27,31 +27,76 @@ export default function Home() {
             <img src="https://picsum.photos/200/250" alt="imagem do filme" />
             <h2>Titulo do filme</h2>
             <p>votos e views</p>
-            <Link href="/">Detalhes</Link>
+            <div className={styles.card_overview}>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                amet. Voluptatibus, dignissimos corrupti tempora error dolor
+                sint est maiores quia molestiae reiciendis facere,
+                reprehenderit, distinctio a sit quibusdam voluptatem
+                repudiandae?
+              </p>
+              <Link href="/">Detalhes</Link>
+            </div>
           </div>
           <div className={styles.movie_card}>
-            <img src="https://picsum.photos/150/200" alt="imagem do filme" />
+            <img src="https://picsum.photos/200/250" alt="imagem do filme" />
             <h2>Titulo do filme</h2>
             <p>votos e views</p>
-            <Link href="/">Detalhes</Link>
+            <div className={styles.card_overview}>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                amet. Voluptatibus, dignissimos corrupti tempora error dolor
+                sint est maiores quia molestiae reiciendis facere,
+                reprehenderit, distinctio a sit quibusdam voluptatem
+                repudiandae?
+              </p>
+              <Link href="/">Detalhes</Link>
+            </div>
           </div>
           <div className={styles.movie_card}>
-            <img src="https://picsum.photos/150/200" alt="imagem do filme" />
+            <img src="https://picsum.photos/200/250" alt="imagem do filme" />
             <h2>Titulo do filme</h2>
             <p>votos e views</p>
-            <Link href="/">Detalhes</Link>
+            <div className={styles.card_overview}>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                amet. Voluptatibus, dignissimos corrupti tempora error dolor
+                sint est maiores quia molestiae reiciendis facere,
+                reprehenderit, distinctio a sit quibusdam voluptatem
+                repudiandae?
+              </p>
+              <Link href="/">Detalhes</Link>
+            </div>
           </div>
           <div className={styles.movie_card}>
-            <img src="https://picsum.photos/150/200" alt="imagem do filme" />
+            <img src="https://picsum.photos/200/250" alt="imagem do filme" />
             <h2>Titulo do filme</h2>
             <p>votos e views</p>
-            <Link href="/">Detalhes</Link>
+            <div className={styles.card_overview}>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                amet. Voluptatibus, dignissimos corrupti tempora error dolor
+                sint est maiores quia molestiae reiciendis facere,
+                reprehenderit, distinctio a sit quibusdam voluptatem
+                repudiandae?
+              </p>
+              <Link href="/">Detalhes</Link>
+            </div>
           </div>
           <div className={styles.movie_card}>
-            <img src="https://picsum.photos/150/200" alt="imagem do filme" />
+            <img src="https://picsum.photos/200/250" alt="imagem do filme" />
             <h2>Titulo do filme</h2>
             <p>votos e views</p>
-            <Link href="/">Detalhes</Link>
+            <div className={styles.card_overview}>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+                amet. Voluptatibus, dignissimos corrupti tempora error dolor
+                sint est maiores quia molestiae reiciendis facere,
+                reprehenderit, distinctio a sit quibusdam voluptatem
+                repudiandae?
+              </p>
+              <Link href="/">Detalhes</Link>
+            </div>
           </div>
         </div>
       </section>
