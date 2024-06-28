@@ -1,7 +1,20 @@
 import MovieCard from '@/components/MovieCard';
 import styles from './page.module.css';
+import { tmdb } from '@/api/tmdbApi';
+import { useState } from 'react';
+
+const TMBD = tmdb;
 
 export default function Home() {
+  const [topMovies, setTopMovies] = useState([]);
+
+  const getMovies = async (url: string) => {
+    const res = await fetch(url);
+    const data = await res.json();
+
+    setTopMovies(data);
+  };
+
   return (
     <main className={styles.main}>
       <section className={styles.header}>
