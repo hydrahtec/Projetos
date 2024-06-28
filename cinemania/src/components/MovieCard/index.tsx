@@ -1,8 +1,12 @@
 import styles from './style.min.module.css';
 import Link from 'next/link';
 
+interface TCard {
+  movie: object[]
+  showMovie?: boolean;
+};
 
-const MovieCard = () => {
+const MovieCard = ({movie, showMovie = true}: TCard) => {
 
 
   return (
