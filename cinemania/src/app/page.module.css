@@ -56,4 +56,26 @@
 }
 .top_rated {
   padding: 15px;
+  width: 100%;
+}
+.title_sec {
+  font-size: 1.5rem;
+  color: var(--text_color);
+  margin-bottom: 5px;
+}
+.top_rated .movie_container {
+  border: 1px solid green;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  column-gap: 4rem;
+  row-gap: 3rem;
+}
+
+.top_rated .movie_card {
+  width: 200px;
+  border: 1px solid var(--secondary_color);
+  border-radius: 5px;
+}
+.top_rated .movie_card img {
+  width: 100%;
 }
