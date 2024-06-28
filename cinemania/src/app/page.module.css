@@ -84,6 +84,8 @@
 }
 .top_rated .movie_card img {
   width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .top_rated .movie_card h2 {
   font-size: 1.6rem;
