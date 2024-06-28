@@ -1,3 +1,4 @@
+/* Estilo geral*/
 .main {
   display: flex;
   flex-direction: column;
@@ -5,6 +6,7 @@
   align-items: center;
   min-height: 100vh;
 }
+/* Estilo do header*/
 .header {
   height: 100vh;
   width: 100%;
@@ -38,22 +40,22 @@
   font-size: 2rem;
   color: var(--secondary_color);
 }
-
-.decript {
+.header .decript {
   font-size: 2.5rem;
 }
-.header_info {
+.header .header_info {
   font-size: 2rem;
   padding: 5px;
   border-radius: 5px;
   background-color: var(--secondary_color);
 }
-
 .header_info a {
   color: var(--text_color);
   text-decoration: none;
   display: block;
 }
+
+/* Estilo dos melhores filmes*/
 .top_rated {
   padding: 15px;
   width: 100%;
@@ -64,6 +66,8 @@
   color: var(--text_color);
   margin-bottom: 5px;
 }
+
+/*movie container*/
 .top_rated .movie_container {
   display: flex;
   flex-wrap: nowrap;
@@ -73,6 +77,7 @@
   align-items: center;
 }
 
+/*movie card*/
 .top_rated .movie_card {
   min-width: 200px;
   border: 1px solid var(--secondary_color);
@@ -95,6 +100,7 @@
   color: var(--secondary_color);
 }
 
+/*movie card overview*/
 .card_overview {
   position: absolute;
   overflow: hidden;
