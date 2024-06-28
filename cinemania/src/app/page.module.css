@@ -4,11 +4,6 @@
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
-  background-image: url('https://picsum.photos/1024/820');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding-top: 60px;
 }
 .header {
   height: 100vh;
@@ -18,6 +13,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
+
+  background-image: url('https://picsum.photos/1024/820');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 60px;
 }
 .header div {
   width: 400px;
@@ -52,4 +53,7 @@
   color: var(--text_color);
   text-decoration: none;
   display: block;
+}
+.top_rated {
+  padding: 15px;
 }

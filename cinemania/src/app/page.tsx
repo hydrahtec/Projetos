@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -13,7 +14,19 @@ export default function Home() {
             reprehenderit natus nesciunt odit doloremque obcaecati quos?
             Distinctio, nobis doloribus.
           </p>
-          <button className={styles.header_info}><a href="#">Mais informações</a></button>
+          <button className={styles.header_info}>
+            <a href="#">Mais informações</a>
+          </button>
+        </div>
+      </section>
+
+      <section className={styles.top_rated}>
+        <h3>Filmes mais procurados:</h3>
+        <div className="movie_card">
+          <img src="https://picsum.photos/150/200" alt="imagem do filme" />
+          <h2>Titulo do filme</h2>
+          <p>votos e views</p>
+          <Link href="/">Detalhes</Link>
         </div>
       </section>
     </main>
