@@ -12,7 +12,7 @@ export default function Home() {
   const getMovies = async (url: string) => {
     const res = await fetch(url);
     const data = await res.json();
-
+    console.log(data.results);
     setTopMovies(data.results);
   };
 
@@ -43,9 +43,7 @@ export default function Home() {
       <section className={styles.top_rated}>
         <h3 className={styles.title_sec}>Filmes mais procurados:</h3>
         <div className={styles.movie_container}>
-          <MovieCard />
-          <MovieCard />
-          <MovieCard />
+          {topMovies.map((movie) => <MovieCard key={movie.id} movie={movie}/>)}
         </div>
       </section>
     </main>
