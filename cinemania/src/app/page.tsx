@@ -17,19 +17,7 @@ export default function Home() {
 
     setTopMovies(data.results);
 
-    setPrimv(data.results[0]);
-
-    if (!priMv) {
-      return;
-    } else {
-      const urlposter = priMv.poster_path;
-
-      if (urlposter) {
-        const imgH = TMBD.API_IMG + urlposter;
-
-        mudaFundo(imgH);
-      }
-    }
+    setPrimv(data.results[1]);
   };
 
   const mudaFundo = (urlImg: string) => {
@@ -44,21 +32,38 @@ export default function Home() {
     getMovies(topRated);
   }, []);
 
+  useEffect(() => {
+    if (!priMv) {
+      return;
+    } else {
+      const urlposter = priMv.poster_path;
+
+      if (urlposter) {
+        const imgH = TMBD.API_IMG + urlposter;
+
+        mudaFundo(imgH);
+      }
+    }
+  }, [priMv]);
+
   return (
     <main className={styles.main}>
-      <section id="header" className={styles.header}>
-        <div>
-          <h2>{priMv.title}</h2>
-          <p className={styles.clasification}>
-            {priMv.vote_average} <FaStar /> - {`Votos: ${priMv.vote_count}`}
-          </p>
-          <p className={styles.decript}>{priMv.overview}</p>
-          <button className={styles.header_info}>
-            <a href="#">Mais informações</a>
-          </button>
-        </div>
-      </section>
+      {priMv.poster_path && (
+        <section id="header" className={styles.header}>
+          <div>
+            <h2>{priMv.title}</h2>
+            <p className={styles.clasification}>
+              {priMv.vote_average} <FaStar /> - {`Votos: ${priMv.vote_count}`}
+            </p>
+            <p className={styles.decript}>{priMv.overview}</p>
+            <button className={styles.header_info}>
+              <a href="#">Mais informações</a>
+            </button>
+          </div>
+        </section>
+      )}
 
+      {topMovies && (
       <section className={styles.top_rated}>
         <h3 className={styles.title_sec}>Filmes mais procurados:</h3>
         <div className={styles.movie_container}>
@@ -67,6 +72,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+      )}
     </main>
   );
 }
