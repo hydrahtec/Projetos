@@ -17,7 +17,7 @@ export default function Home() {
 
     setTopMovies(data.results);
 
-    setPrimv(data.results[1]);
+    setPrimv(data.results[3]);
   };
 
   const mudaFundo = (urlImg: string) => {
@@ -36,7 +36,7 @@ export default function Home() {
     if (!priMv) {
       return;
     } else {
-      const urlposter = priMv.poster_path;
+      const urlposter = priMv.backdrop_path;
 
       if (urlposter) {
         const imgH = TMBD.API_IMG + urlposter;
