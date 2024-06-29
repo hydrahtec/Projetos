@@ -18,6 +18,18 @@ export default function Home() {
     setTopMovies(data.results);
 
     setPrimv(data.results[0]);
+
+    if (!priMv) {
+      return;
+    } else {
+      const urlposter = priMv.poster_path;
+
+      if (urlposter) {
+        const imgH = TMBD.API_IMG + urlposter;
+
+        mudaFundo(imgH);
+      }
+    }
   };
 
   const mudaFundo = (urlImg: string) => {
@@ -30,18 +42,7 @@ export default function Home() {
     const topRated = TMBD.API_TOP_RATED;
 
     getMovies(topRated);
-
-    if (!priMv) {
-      return;
-    } else {
-      const urlposter = priMv.poster_path;
-
-      if (urlposter) {
-        const imgH = TMBD.API_IMG + urlposter;
-        mudaFundo(imgH);
-      }
-    }
-  }, [topMovies, priMv]);
+  }, []);
 
   return (
     <main className={styles.main}>
