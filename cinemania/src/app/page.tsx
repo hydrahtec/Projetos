@@ -64,7 +64,7 @@ export default function Home() {
       )}
 
       {topMovies && (
-      <section className={styles.top_rated}>
+      <section className={styles.container}>
         <h3 className={styles.title_sec}>Filmes mais procurados:</h3>
         <div className={styles.movie_container}>
           {topMovies.map((movie) => (
