@@ -73,26 +73,6 @@ export default function Home() {
         </div>
       </section>
       )}
-      {topMovies && (
-      <section className={styles.container}>
-        <h3 className={styles.title_sec}>Filmes mais procurados:</h3>
-        <div className={styles.movie_container}>
-          {topMovies.map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
-          ))}
-        </div>
-      </section>
-      )}
-      {topMovies && (
-      <section className={styles.container}>
-        <h3 className={styles.title_sec}>Filmes mais procurados:</h3>
-        <div className={styles.movie_container}>
-          {topMovies.map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
-          ))}
-        </div>
-      </section>
-      )}
     </main>
   );
 }
