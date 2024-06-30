@@ -1,14 +1,15 @@
 /*movie card*/
 .movie_card {
-  min-width: 200px;
-  border: 1px solid var(--secondary_color);
-  border-radius: 5px;
+  gap: 5px;
   display: flex;
-  justify-content: center;
+  min-width: 200px;
+  position: relative;
+  border-radius: 5px;
   align-items: center;
   flex-direction: column;
-  gap: 5px;
-  position: relative;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border: 1px solid var(--secondary_color);
 }
 .movie_card img {
   width: 100%;
