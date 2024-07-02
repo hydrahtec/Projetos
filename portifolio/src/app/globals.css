@@ -1,7 +1,7 @@
 :root {
-  --primary_color: #fff;
-  --secondary_color: #fff;
-  --text_color: #fff;
+  --primary_color: #3d4b58;
+  --secondary_color: #691f94;
+  --text_color: #076b9a;
 }
 html {
   font-size: 62.5%;
@@ -11,4 +11,5 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color: #000;
 }
