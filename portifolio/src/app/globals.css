@@ -1,0 +1,14 @@
+:root {
+  --primary_color: #fff;
+  --secondary_color: #fff;
+  --text_color: #fff;
+}
+html {
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
